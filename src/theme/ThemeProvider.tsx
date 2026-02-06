@@ -23,9 +23,10 @@ export const ThemeProvider = ({ children }: PropsWithChildren): React.ReactNode 
   const scheme = useColorScheme();
 
   const colors = useMemo(() => {
-    if (theme === 'light') return LIGHT_COLORS;
-    if (theme === 'dark') return DARK_COLORS;
-    return scheme === 'dark' ? DARK_COLORS : LIGHT_COLORS;
+    // if (theme === 'light') return LIGHT_COLORS;
+    // if (theme === 'dark') return DARK_COLORS;
+    // return scheme === 'dark' ? DARK_COLORS : LIGHT_COLORS;
+    return DARK_COLORS;
   }, [theme, scheme]);
 
   const changeTheme = useCallback((newTheme: AppTheme) => {

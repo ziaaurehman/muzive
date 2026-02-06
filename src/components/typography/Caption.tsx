@@ -6,7 +6,7 @@ import Animated from 'react-native-reanimated';
 
 const Caption = forwardRef<Animated.Text, BaseTextProps>(
   (
-    { children, fontWeight = 'semibold', tone, style, onPress }: BaseTextProps,
+    { children, fontWeight = 'regular', tone, style, onPress }: BaseTextProps,
     ref
   ) => {
     const { captionStyle } = styles;

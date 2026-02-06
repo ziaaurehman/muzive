@@ -5,7 +5,7 @@ export const FONT_SIZES = {
   INPUT_FIELD_TEXT: adaptiveFont(14),
 
   TITLE: adaptiveFont(32),
-  SUBTITLE: adaptiveFont(14),
+  SUBTITLE: adaptiveFont(20),
   SECTION_TITLE: adaptiveFont(18),
   SECTION_TITLE_LARGE: adaptiveFont(20),
   SECTION_TITLE_SMALL: adaptiveFont(16),
@@ -35,8 +35,8 @@ export const SPACING = {
 };
 
 export const HEIGHTS = {
-  INPUT_FIELD_HEIGHT: adaptiveSize(48, true),
-  BUTTON_HEIGHT: adaptiveSize(44, true),
+  INPUT_FIELD_HEIGHT: adaptiveSize(44, true),
+  BUTTON_HEIGHT: adaptiveSize(48, true),
   OUTLINE_BUTTON_HEIGHT: adaptiveSize(28, true),
   MEDIUM_BUTTON_HEIGHT: adaptiveSize(21, true),
   LARGE_ICON_SIZE: adaptiveSize(36, true),

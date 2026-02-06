@@ -126,7 +126,7 @@ const Input = <T extends FieldValues>({
   return (
     <View style={containerStyle}>
       {label && <Caption>{label}</Caption>}
-      <Gap />
+      <Gap height={SPACING.TINY + 2} />
       <Row style={[inputContainerStyle, borderStyle]}>
         <TextInput
           cursorColor={colors.primaryColor}
@@ -187,19 +187,17 @@ const createStyles = (colors: ThemeColor, height?: number) =>
     inputContainerStyle: {
       borderRadius: RADIUS.SMALL,
       paddingHorizontal: SPACING.SEMI_MEDIUM,
-      borderWidth: BORDERS.DEFAULT_BORDER,
-      borderColor: colors.borderColor,
-      backgroundColor: colors.outlineBackgroundColor,
+      backgroundColor: 'transparent',
       paddingVertical: height ? SPACING.SMALL : 0,
       alignItems: height ? 'flex-start' : 'center',
       height: height ?? HEIGHTS.INPUT_FIELD_HEIGHT,
     },
     inputStyle: {
-      color: colors.textColor,
+      color: colors.white,
       width: '90%',
-      fontSize: FONT_SIZES.BODY,
+      fontSize: FONT_SIZES.FOOTNOTE,
     },
     iconStyle: {
-      color: colors.placeholderTextColor,
+      color: colors.white,
     },
   });

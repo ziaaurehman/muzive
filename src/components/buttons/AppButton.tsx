@@ -12,11 +12,11 @@ import { useTheme } from '@src/theme/ThemeProvider';
 import {
   BORDERS,
   FONT_SIZES,
+  FONT_WEIGHTS,
   HEIGHTS,
   RADIUS,
   SPACING,
 } from '@src/utils/constants';
-import Caption from '../typography/Caption';
 import AppIcon from '../icons/AppIcon';
 
 export type AppButtonType =
@@ -71,12 +71,12 @@ const AppButton = ({
 }: AppButtonProps) => {
   const { colors } = useTheme();
   const buttonSizeStyle: Record<ButtonSize, DimensionValue> = {
-    default: HEIGHTS.INPUT_FIELD_HEIGHT,
-    small: HEIGHTS.INPUT_FIELD_HEIGHT * 0.8,
-    tiny: HEIGHTS.INPUT_FIELD_HEIGHT * 0.6,
+    default: HEIGHTS.BUTTON_HEIGHT,
+    small: HEIGHTS.BUTTON_HEIGHT * 0.8,
+    tiny: HEIGHTS.BUTTON_HEIGHT * 0.6,
   };
   const baseButtonStyle: ViewStyle = {
-    borderRadius: RADIUS.SMALL,
+    borderRadius: RADIUS.FULL,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -112,11 +112,11 @@ const AppButton = ({
     },
     outline: {
       buttonStyle: {
-        backgroundColor: colors.outlineBackgroundColor,
+        backgroundColor: 'transparent',
         borderWidth: BORDERS.DEFAULT_BORDER,
-        borderColor: colors.borderColor,
+        borderColor: colors.primaryColor,
       },
-      textStyle: { color: colors.textColor },
+      textStyle: { color: colors.primaryColor },
     },
     outlineContrast: {
       buttonStyle: {
@@ -139,7 +139,7 @@ const AppButton = ({
         backgroundColor: colors.transparentColor,
         paddingHorizontal: 0,
       },
-      textStyle: { color: colors.secondaryColor },
+      textStyle: { color: colors.primaryColor },
     },
     underline: {
       buttonStyle: {
@@ -186,12 +186,12 @@ const AppButton = ({
           {icon && typeof icon !== 'string' && icon}
           {title &&
             (buttonSize === 'tiny' || textSize === 'small' ? (
-              <Caption
+              <Body
                 fontWeight='medium'
-                style={[buttonTypeStyles[buttonType].textStyle, textStyle]}
+                style={[{ fontWeight: FONT_WEIGHTS.BOLD }, buttonTypeStyles[buttonType].textStyle, textStyle]}
               >
                 {title}
-              </Caption>
+              </Body>
             ) : (
               <Body
                 fontWeight='medium'

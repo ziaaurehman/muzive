@@ -70,7 +70,6 @@ const Page = ({
         <SafeAreaView
           style={[styles.loadingStyle, styles.fullPageContentStyle]}
         >
-          {/* TODO: Use Lottie  */}
           <ActivityIndicator color={colors.textColor} />
         </SafeAreaView>
       ) : (

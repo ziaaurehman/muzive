@@ -1,11 +1,11 @@
 import Ionicons from '@react-native-vector-icons/ionicons';
 import Octicons from '@react-native-vector-icons/octicons';
-// Import other icon libraries as needed
+import MaterialIcons from '@react-native-vector-icons/material-design-icons';
 
 const ICON_LIBRARIES = {
   ionicons: Ionicons,
   octicons: Octicons,
-  // Add other icon libraries here
+  materialIcons: MaterialIcons,
 };
 
 export type IconLibraryType = keyof typeof ICON_LIBRARIES;
