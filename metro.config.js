@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
 
 /**
@@ -6,6 +7,17 @@ const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
  *
  * @type {import('@react-native/metro-config').MetroConfig}
  */
-const config = {};
+const config = {
+    watchFolders: [],
+    resolver: {
+        blockList: [
+            // Block watching Android build files
+            /android\/.*/,
+            /\.cxx\/.*/,
+            /CMakeFiles\/.*/,
+            /CMakeTmp\/.*/,
+        ],
+    },
+};
 
 module.exports = mergeConfig(getDefaultConfig(__dirname), config);
