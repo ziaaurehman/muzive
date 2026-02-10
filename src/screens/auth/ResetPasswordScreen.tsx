@@ -11,10 +11,8 @@ import Input from "@src/components/input/Input";
 import { useForm } from "react-hook-form";
 import AppButton from "@src/components/buttons/AppButton";
 import { adaptiveSize } from "@src/utils/scaleUtils";
-import Row from "@src/components/layout/Row";
 import PasswordStrengthBar from "@src/components/input/PasswordStrengthBar";
 import Card from "@src/components/layout/Card";
-import { GoogleIcon } from "@src/assets/svg/auth/assets";
 import { ResetPasswordScreenProps } from "@src/navigation/auth/auth.params";
 
 const ResetPasswordScreen = ({ navigation }: ResetPasswordScreenProps) => {

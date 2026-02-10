@@ -18,11 +18,16 @@ import Column from "@src/components/layout/Column";
 import AppIcon from "@src/components/icons/AppIcon";
 import ICONS from "@src/utils/icons";
 import { useState } from "react";
+import { LoginFormSchema, loginSchema } from "@src/schemas/auth/login.schema";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 const LoginScreen = ({ navigation }: LoginScreenProps) => {
     const { colors } = useTheme()
     const styles = createStyles(colors)
-    const { control, watch } = useForm()
+    const { control, watch, formState: { errors } } = useForm<LoginFormSchema>({
+        resolver: yupResolver(loginSchema),
+        mode: 'onChange',
+    })
     const [remember, setRemember] = useState(false)
 
     const password = watch('password')
@@ -42,13 +47,15 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
                 placeholder="Enter your Email"
                 control={control}
                 name="email"
+                errorMessage={errors.email?.message}
+                hasError={!!errors.email}
             />
             {email?.includes('@gmail.com') &&
                 <>
                     <Gap height={SPACING.SEMI_MEDIUM} />
                     <AppButton
                         title="Sign Up with Google"
-                        onPress={() => { }}
+                        onPress={() => { navigation.navigate('GoogleAuthScreen', { authType: 'login' }) }}
                         buttonType="secondary"
                         fullWidth
                         icon={<GoogleIcon />}
@@ -62,6 +69,8 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
                 control={control}
                 secureTextEntry
                 name="password"
+                errorMessage={errors.password?.message}
+                hasError={!!errors.password}
             />
             <Row style={styles.rememberRow}>
                 <Row>

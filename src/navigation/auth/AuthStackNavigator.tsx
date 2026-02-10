@@ -5,6 +5,12 @@ import RegisterScreen from "@src/screens/auth/RegisterScreen";
 import LoginScreen from "@src/screens/auth/LoginScreen";
 import ForgotPasswordScreen from "@src/screens/auth/ForgotPasswordScreen";
 import ResetPasswordScreen from "@src/screens/auth/ResetPasswordScreen";
+import OtpVerificationScreen from "@src/screens/auth/OtpVerificationScreen";
+import VerifyEmailScreen from "@src/screens/auth/VerifyEmailScreen";
+import EmailVerifiedScreen from "@src/screens/auth/EmailVerifiedScreen";
+import MusicStylesScreen from "@src/screens/auth/MusicStylesScreen";
+import GoogleAuthScreen from "@src/screens/auth/GoogleAuthScreen";
+
 const Stack = createNativeStackNavigator<AuthParamsList>();
 
 const AuthStackNavigator = () => {
@@ -19,7 +25,11 @@ const AuthStackNavigator = () => {
             <Screen name="LoginScreen" component={LoginScreen} />
             <Screen name="ForgotPasswordScreen" component={ForgotPasswordScreen} />
             <Screen name="ResetPasswordScreen" component={ResetPasswordScreen} />
-
+            <Screen name="OtpVerificationScreen" component={OtpVerificationScreen} />
+            <Screen name="VerifyEmailScreen" component={VerifyEmailScreen} />
+            <Screen name="EmailVerifiedScreen" component={EmailVerifiedScreen} />
+            <Screen name="MusicStylesScreen" component={MusicStylesScreen} />
+            <Screen name="GoogleAuthScreen" component={GoogleAuthScreen} />
         </Navigator>
     )
 }

@@ -161,8 +161,8 @@ const Input = <T extends FieldValues>({
       </Row>
       {hasError && validationRules.length === 0 && (
         <>
-          <Gap height={SPACING.TINY} />
-          <Caption fontWeight='regular' tone='input-critical'>
+          <Gap height={SPACING.EXTRA_SMALL} />
+          <Caption fontWeight='regular' tone='critical'>
             {errorMessage ?? ''}
           </Caption>
         </>

@@ -7,6 +7,11 @@ export type AuthParamsList = {
     LoginScreen: undefined;
     ForgotPasswordScreen: undefined;
     ResetPasswordScreen: undefined;
+    OtpVerificationScreen: undefined;
+    VerifyEmailScreen: undefined | { email: string };
+    EmailVerifiedScreen: undefined;
+    MusicStylesScreen: undefined;
+    GoogleAuthScreen: undefined | { authType: 'login' | 'register' };
 }
 
 export type LoginScreenProps = NativeStackScreenProps<
@@ -33,3 +38,29 @@ export type AuthenicateByProps = NativeStackScreenProps<
     AuthParamsList,
     'AuthenicateByScreen'
 >;
+
+export type OtpVerificationScreenProps = NativeStackScreenProps<
+    AuthParamsList,
+    'OtpVerificationScreen'
+>;
+
+export type VerifyEmailScreenProps = NativeStackScreenProps<
+    AuthParamsList,
+    'VerifyEmailScreen'
+>;
+
+export type EmailVerifiedScreenProps = NativeStackScreenProps<
+    AuthParamsList,
+    'EmailVerifiedScreen'
+>;
+
+export type MusicStylesScreenProps = NativeStackScreenProps<
+    AuthParamsList,
+    'MusicStylesScreen'
+>;
+
+export type GoogleAuthScreenProps = NativeStackScreenProps<
+    AuthParamsList,
+    'GoogleAuthScreen'
+>;
+

@@ -60,7 +60,7 @@ export const DARK_COLORS: ThemeColor = {
   infoTextColor: '#4a5B6d',
   successTextColor: '#0e6421',
   warningTextColor: '#7a7506',
-  criticalTextColor: '#7a0505',
+  criticalTextColor: '#EA4335',
 
   borderColor: '#ffffff30',
   selectedBorderColor: '#fff',

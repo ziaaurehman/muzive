@@ -50,7 +50,7 @@ const ForgotPasswordScreen = ({ navigation }: ForgotPasswordScreenProps) => {
             <Gap height={SPACING.SEMI_MEDIUM} />
             <AppButton
                 title="Send Reset Code"
-                onPress={() => { navigation.navigate('ResetPasswordScreen') }}
+                onPress={() => { navigation.navigate('OtpVerificationScreen') }}
                 style={styles.buttonStyle}
                 fullWidth
             />

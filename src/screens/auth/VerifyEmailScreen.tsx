@@ -10,7 +10,7 @@ import Caption from "@src/components/typography/Caption";
 import AppButton from "@src/components/buttons/AppButton";
 import { adaptiveSize } from "@src/utils/scaleUtils";
 import Row from "@src/components/layout/Row";
-import { OtpVerificationScreenProps } from "@src/navigation/auth/auth.params";
+import { OtpVerificationScreenProps, VerifyEmailScreenProps } from "@src/navigation/auth/auth.params";
 import { useEffect, useRef, useState } from "react";
 import { calculateRemainingSelection, formatTime } from "@src/utils/code.expires.utils";
 
@@ -19,7 +19,7 @@ const OTP_DURATION = 15 * 60 * 1000;
 let dummyCode = '123456';
 
 
-const OtpVerificationScreen = ({ navigation }: OtpVerificationScreenProps) => {
+const VerifyEmailScreen = ({ navigation, route }: VerifyEmailScreenProps) => {
     const { colors } = useTheme()
     const styles = createStyles(colors)
     const codeInputs = [
@@ -36,7 +36,7 @@ const OtpVerificationScreen = ({ navigation }: OtpVerificationScreenProps) => {
     const [attempt, setAttempt] = useState(0);
     const [otp, setOtp] = useState(['', '', '', '', '', '']);
     const codeExpired = timeLeft === 0;
-
+    const { email } = route?.params || {};
     const borderColor = codeExpired || errorMessage ? colors.critical : colors.borderColor;
 
     useEffect(() => {
@@ -109,7 +109,7 @@ const OtpVerificationScreen = ({ navigation }: OtpVerificationScreenProps) => {
         const otpString = otp.join('');
 
         if (dummyCode === otpString) {
-            navigation.navigate('ResetPasswordScreen')
+            navigation.navigate('EmailVerifiedScreen')
             setErrorMessage('')
         } else {
             setErrorMessage('Incorrect code. Please try again.')
@@ -120,9 +120,9 @@ const OtpVerificationScreen = ({ navigation }: OtpVerificationScreenProps) => {
         <Page>
             <Title style={styles.title}  >Muzive</Title>
             <Gap height={SPACING.MEDIUM_PLUS} />
-            <Subtitle style={styles.subtitle} >Check your Email</Subtitle>
+            <Subtitle style={styles.subtitle} >Verify your Email</Subtitle>
             <Gap height={SPACING.TINY} />
-            <Caption style={styles.subtitle} >Enter the code we sent to your email to verify your identity</Caption>
+            <Caption style={styles.subtitle} >{`We've sent a 6-digit code to your email:\n${email}`}</Caption>
             <Gap height={SPACING.MEDIUM_PLUS} />
 
             <Row style={styles.rowStyle}>
@@ -170,7 +170,7 @@ const OtpVerificationScreen = ({ navigation }: OtpVerificationScreenProps) => {
     )
 }
 
-export default OtpVerificationScreen;
+export default VerifyEmailScreen;
 
 const createStyles = (colors: ThemeColor) =>
     StyleSheet.create({

@@ -12,19 +12,20 @@ import Row from "@src/components/layout/Row"
 import Divider from "@src/components/layout/Divider"
 import Caption from "@src/components/typography/Caption"
 import { AuthenicateByProps } from "@src/navigation/auth/auth.params"
+import Column from "@src/components/layout/Column"
 
 const AuthenicateByScreen = ({ navigation }: AuthenicateByProps) => {
     const { colors } = useTheme()
     const styles = createStyles(colors)
     return (
-        <Page>
+        <Page >
             <Title style={styles.title}  >Muzive</Title>
             <Gap height={SPACING.MEDIUM_PLUS} />
             <Subtitle style={styles.subtitle} >New user? Create an account</Subtitle>
             <Gap height={SPACING.MEDIUM_PLUS} />
             <AppButton
                 title="Sign Up with Google"
-                onPress={() => { }}
+                onPress={() => { navigation.navigate('GoogleAuthScreen', { authType: 'register' }) }}
                 buttonType="secondary"
                 fullWidth
                 icon={<GoogleIcon />}
@@ -79,5 +80,9 @@ const createStyles = (colors: ThemeColor) =>
         },
         loginRow: {
             justifyContent: 'center'
+        },
+        columnStyle: {
+            justifyContent: 'center',
+            flex: 1
         }
     })

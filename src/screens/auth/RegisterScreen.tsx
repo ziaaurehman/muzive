@@ -16,11 +16,24 @@ import PasswordStrengthBar from "@src/components/input/PasswordStrengthBar";
 import Card from "@src/components/layout/Card";
 import { GoogleIcon } from "@src/assets/svg/auth/assets";
 import { RegisterScreenProps } from "@src/navigation/auth/auth.params";
+import { RegisterFormSchema, registerSchema } from "@src/schemas/auth/register.form.schema";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useValidationRules } from "@src/utils/password.utils";
+import { useState } from "react";
 
 const RegisterScreen = ({ navigation }: RegisterScreenProps) => {
     const { colors } = useTheme()
     const styles = createStyles(colors)
-    const { control, watch } = useForm()
+
+    const {
+        control,
+        watch,
+        handleSubmit,
+        formState: { errors, isValid },
+    } = useForm<RegisterFormSchema>({
+        resolver: yupResolver(registerSchema),
+        mode: 'onChange',
+    });
 
     const password = watch('password')
     const email = watch('email')
@@ -38,6 +51,8 @@ const RegisterScreen = ({ navigation }: RegisterScreenProps) => {
                 placeholder="Enter your Name"
                 control={control}
                 name="name"
+                errorMessage={errors.name?.message}
+                hasError={!!errors.name}
             />
             <Gap height={SPACING.SEMI_MEDIUM} />
             <Input
@@ -45,13 +60,15 @@ const RegisterScreen = ({ navigation }: RegisterScreenProps) => {
                 placeholder="Enter your Email"
                 control={control}
                 name="email"
+                errorMessage={errors.email?.message}
+                hasError={!!errors.email}
             />
             {email?.includes('@gmail.com') &&
                 <>
                     <Gap height={SPACING.SEMI_MEDIUM} />
                     <AppButton
                         title="Sign Up with Google"
-                        onPress={() => { }}
+                        onPress={() => { navigation.navigate('GoogleAuthScreen', { authType: 'register' }) }}
                         buttonType="secondary"
                         fullWidth
                         icon={<GoogleIcon />}
@@ -65,6 +82,8 @@ const RegisterScreen = ({ navigation }: RegisterScreenProps) => {
                 control={control}
                 secureTextEntry
                 name="password"
+                hasError={!!errors.password}
+                errorMessage={errors.password?.message}
             />
             {password?.length > 2 &&
                 <>
@@ -93,11 +112,13 @@ const RegisterScreen = ({ navigation }: RegisterScreenProps) => {
                 secureTextEntry
                 control={control}
                 name="confirmPassword"
+                hasError={!!errors.confirmPassword}
+                errorMessage={errors.confirmPassword?.message}
             />
             <Gap height={SPACING.SEMI_MEDIUM} />
             <AppButton
                 title="Sign Up"
-                onPress={() => { }}
+                onPress={() => { navigation.navigate('VerifyEmailScreen', { email: 'avc@gmail.com' }) }}
                 style={styles.buttonStyle}
                 fullWidth
             />
