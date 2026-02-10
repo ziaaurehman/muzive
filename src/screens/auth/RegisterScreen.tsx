@@ -21,9 +21,14 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useValidationRules } from "@src/utils/password.utils";
 import { useState } from "react";
 
+import { signUpWithEmail } from "../../../lib/firebase/auth";
+import { callCreateUserProfile, callSendVerificationOTP } from "../../../lib/firebase/functions";
+import { Alert } from "react-native";
+
 const RegisterScreen = ({ navigation }: RegisterScreenProps) => {
     const { colors } = useTheme()
     const styles = createStyles(colors)
+    const [isLoading, setIsLoading] = useState(false)
 
     const {
         control,
@@ -37,6 +42,27 @@ const RegisterScreen = ({ navigation }: RegisterScreenProps) => {
 
     const password = watch('password')
     const email = watch('email')
+
+    const onRegister = async (data: RegisterFormSchema) => {
+        setIsLoading(true)
+        try {
+            // 1. Create the user
+            await signUpWithEmail(data.email, data.password)
+
+            // 2. Create the user profile (save name)
+            // await callCreateUserProfile(data.name)
+
+            // 3. Trigger OTP verification email/sms
+            await callSendVerificationOTP()
+
+            // 4. Navigate to Verify Email Screen
+            navigation.navigate('VerifyEmailScreen', { email: data.email })
+        } catch (error: any) {
+            Alert.alert("Registration Failed", error.message)
+        } finally {
+            setIsLoading(false)
+        }
+    }
 
     return (
         <Page>
@@ -65,6 +91,8 @@ const RegisterScreen = ({ navigation }: RegisterScreenProps) => {
             />
             {email?.includes('@gmail.com') &&
                 <>
+                    <Gap height={SPACING.EXTRA_SMALL} />
+                    <Caption tone='input-critical'>Looks like you're using a Gmail -- sign up with Google to continue</Caption>
                     <Gap height={SPACING.SEMI_MEDIUM} />
                     <AppButton
                         title="Sign Up with Google"
@@ -118,7 +146,8 @@ const RegisterScreen = ({ navigation }: RegisterScreenProps) => {
             <Gap height={SPACING.SEMI_MEDIUM} />
             <AppButton
                 title="Sign Up"
-                onPress={() => { navigation.navigate('VerifyEmailScreen', { email: 'avc@gmail.com' }) }}
+                loading={isLoading}
+                onPress={handleSubmit(onRegister)}
                 style={styles.buttonStyle}
                 fullWidth
             />

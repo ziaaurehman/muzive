@@ -15,14 +15,34 @@ import Row from "@src/components/layout/Row";
 import { ForgotPasswordScreenProps } from "@src/navigation/auth/auth.params";
 import { useState } from "react";
 
+import { callSendPasswordResetOTP } from "../../../lib/firebase/functions";
+import { Alert } from "react-native";
+
 const ForgotPasswordScreen = ({ navigation }: ForgotPasswordScreenProps) => {
     const { colors } = useTheme()
     const styles = createStyles(colors)
-    const { control, watch } = useForm()
-    const [remember, setRemember] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
+    const { control, watch, handleSubmit } = useForm({
+        defaultValues: {
+            email: ''
+        }
+    })
 
-    const password = watch('password')
-    const email = watch('email')
+    const onSendResetCode = async (data: { email: string }) => {
+        if (!data.email) {
+            Alert.alert("Error", "Please enter your email address")
+            return
+        }
+        setIsLoading(true)
+        try {
+            await callSendPasswordResetOTP(data.email)
+            navigation.navigate('OtpVerificationScreen', { email: data.email })
+        } catch (error: any) {
+            Alert.alert("Error", error.message)
+        } finally {
+            setIsLoading(false)
+        }
+    }
 
     return (
         <Page>
@@ -50,7 +70,8 @@ const ForgotPasswordScreen = ({ navigation }: ForgotPasswordScreenProps) => {
             <Gap height={SPACING.SEMI_MEDIUM} />
             <AppButton
                 title="Send Reset Code"
-                onPress={() => { navigation.navigate('OtpVerificationScreen') }}
+                loading={isLoading}
+                onPress={handleSubmit(onSendResetCode)}
                 style={styles.buttonStyle}
                 fullWidth
             />

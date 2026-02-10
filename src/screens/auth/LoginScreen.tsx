@@ -21,10 +21,14 @@ import { useState } from "react";
 import { LoginFormSchema, loginSchema } from "@src/schemas/auth/login.schema";
 import { yupResolver } from "@hookform/resolvers/yup";
 
+import { signInWithEmail } from "../../../lib/firebase/auth";
+import { Alert } from "react-native";
+
 const LoginScreen = ({ navigation }: LoginScreenProps) => {
     const { colors } = useTheme()
     const styles = createStyles(colors)
-    const { control, watch, formState: { errors } } = useForm<LoginFormSchema>({
+    const [isLoading, setIsLoading] = useState(false)
+    const { control, watch, handleSubmit, formState: { errors } } = useForm<LoginFormSchema>({
         resolver: yupResolver(loginSchema),
         mode: 'onChange',
     })
@@ -32,6 +36,21 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
 
     const password = watch('password')
     const email = watch('email')
+
+    const onLogin = async (data: LoginFormSchema) => {
+        setIsLoading(true)
+        try {
+            await signInWithEmail(data.email, data.password)
+            // Navigation will be handled by RootNavigator if useAuth hook is used there,
+            // or we can manually navigate if needed. 
+            // For now, let's assume successful login leads elsewhere or we just show success.
+            console.log("Logged in successfully")
+        } catch (error: any) {
+            Alert.alert("Login Failed", error.message)
+        } finally {
+            setIsLoading(false)
+        }
+    }
 
     return (
         <Page>
@@ -89,7 +108,8 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
             <Gap height={SPACING.SEMI_MEDIUM} />
             <AppButton
                 title="Login"
-                onPress={() => { }}
+                loading={isLoading}
+                onPress={handleSubmit(onLogin)}
                 style={styles.buttonStyle}
                 fullWidth
             />

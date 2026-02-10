@@ -16,12 +16,13 @@ import { calculateRemainingSelection, formatTime } from "@src/utils/code.expires
 
 let otpExpiryTime: number | null = null;
 const OTP_DURATION = 15 * 60 * 1000;
-let dummyCode = '123456';
+import { callVerifyPasswordResetOTP, callSendPasswordResetOTP } from "../../../lib/firebase/functions";
+import { Alert } from "react-native";
 
-
-const OtpVerificationScreen = ({ navigation }: OtpVerificationScreenProps) => {
+const OtpVerificationScreen = ({ navigation, route }: OtpVerificationScreenProps) => {
     const { colors } = useTheme()
     const styles = createStyles(colors)
+    const [isLoading, setIsLoading] = useState(false);
     const codeInputs = [
         useRef<TextInput>(null),
         useRef<TextInput>(null),
@@ -36,6 +37,7 @@ const OtpVerificationScreen = ({ navigation }: OtpVerificationScreenProps) => {
     const [attempt, setAttempt] = useState(0);
     const [otp, setOtp] = useState(['', '', '', '', '', '']);
     const codeExpired = timeLeft === 0;
+    const { email } = route.params || {};
 
     const borderColor = codeExpired || errorMessage ? colors.critical : colors.borderColor;
 
@@ -67,16 +69,26 @@ const OtpVerificationScreen = ({ navigation }: OtpVerificationScreenProps) => {
     }, [codeExpired]);
 
 
-    const handleResend = () => {
+    const handleResend = async () => {
+        if (!email) return;
         if (attempt >= 5) {
-            setErrorMessage('You have send 5 maximum attempts in 24 hours, please try again after 24 hours')
+            setErrorMessage('You have sent 5 maximum attempts in 24 hours, please try again after 24 hours')
             setIsResendDisabled(true)
         } else {
-            setErrorMessage('')
-            otpExpiryTime = Date.now() + OTP_DURATION;
-            setTimeLeft(OTP_DURATION / 1000);
-            setAttempt(attempt + 1);
-            setOtp(['', '', '', '', '', '']);
+            setIsLoading(true)
+            try {
+                await callSendPasswordResetOTP(email)
+                setErrorMessage('')
+                otpExpiryTime = Date.now() + OTP_DURATION;
+                setTimeLeft(OTP_DURATION / 1000);
+                setAttempt(attempt + 1);
+                setOtp(['', '', '', '', '', '']);
+                Alert.alert("Success", "Reset code resent successfully.")
+            } catch (error: any) {
+                setErrorMessage(error.message)
+            } finally {
+                setIsLoading(false)
+            }
         }
     };
 
@@ -105,14 +117,20 @@ const OtpVerificationScreen = ({ navigation }: OtpVerificationScreenProps) => {
         }
     };
 
-    const validateOtp = () => {
+    const validateOtp = async () => {
         const otpString = otp.join('');
+        if (otpString.length < 6) return;
+        if (!email) return;
 
-        if (dummyCode === otpString) {
-            navigation.navigate('ResetPasswordScreen')
+        setIsLoading(true)
+        try {
+            const resetToken = await callVerifyPasswordResetOTP(email, otpString)
             setErrorMessage('')
-        } else {
-            setErrorMessage('Incorrect code. Please try again.')
+            navigation.navigate('ResetPasswordScreen', { email, resetToken })
+        } catch (error: any) {
+            setErrorMessage(error.message || 'Incorrect code. Please try again.')
+        } finally {
+            setIsLoading(false)
         }
     }
 
@@ -147,6 +165,7 @@ const OtpVerificationScreen = ({ navigation }: OtpVerificationScreenProps) => {
             <Gap height={SPACING.MEDIUM_PLUS} />
             <AppButton
                 title="Verify"
+                loading={isLoading}
                 onPress={validateOtp}
                 style={styles.buttonStyle}
                 fullWidth

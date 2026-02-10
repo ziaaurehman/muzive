@@ -9,23 +9,23 @@ export const registerSchema = yup.object({
     name: yup.string().required('Name is required'),
     email: yup.string()
         .required('Email is required')
-        .email('Please enter a valid email address')
-        .test('email-api-check', 'Invalid email', async (value, context) => {
-            if (!value) return true;
-            const existsInApi = await checkEmailExists(value);
+        .email('Please enter a valid email address'),
+    // .test('email-api-check', 'Invalid email', async (value, context) => {
+    //     if (!value) return true;
+    //     const existsInApi = await checkEmailExists(value);
 
-            if (existsInApi) {
-                return context.createError({ message: 'This email already exists, You can continue with login process' });
-            }
+    //     if (existsInApi) {
+    //         return context.createError({ message: 'This email already exists, You can continue with login process' });
+    //     }
 
-            if (value.toLowerCase().endsWith('@gmail.com')) {
-                return context.createError({
-                    message: "Looks like you're using a Gmail -- sign up with Google to continue."
-                });
-            }
+    //     if (value.toLowerCase().endsWith('@gmail.com')) {
+    //         return context.createError({
+    //             message: "Looks like you're using a Gmail -- sign up with Google to continue."
+    //         });
+    //     }
 
-            return true;
-        }),
+    //     return true;
+    // }),
     password: yup.string()
         .required('Password is required')
         .matches(

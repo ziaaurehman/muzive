@@ -15,13 +15,47 @@ import PasswordStrengthBar from "@src/components/input/PasswordStrengthBar";
 import Card from "@src/components/layout/Card";
 import { ResetPasswordScreenProps } from "@src/navigation/auth/auth.params";
 
-const ResetPasswordScreen = ({ navigation }: ResetPasswordScreenProps) => {
+import { callResetPassword } from "../../../lib/firebase/functions";
+import { Alert } from "react-native";
+import { useState } from "react";
+
+const ResetPasswordScreen = ({ navigation, route }: ResetPasswordScreenProps) => {
     const { colors } = useTheme()
     const styles = createStyles(colors)
-    const { control, watch } = useForm()
+    const [isLoading, setIsLoading] = useState(false)
+    const { control, watch, handleSubmit } = useForm({
+        defaultValues: {
+            password: '',
+            confirmPassword: ''
+        }
+    })
+
+    const { email, resetToken } = route.params || {};
 
     const password = watch('password')
-    const email = watch('email')
+
+    const onUpdatePassword = async (data: any) => {
+        if (!email || !resetToken) {
+            Alert.alert("Error", "Missing reset information. Please try starting over.")
+            return
+        }
+        if (data.password !== data.confirmPassword) {
+            Alert.alert("Error", "Passwords do not match")
+            return
+        }
+
+        setIsLoading(true)
+        try {
+            await callResetPassword(email, data.password, resetToken)
+            Alert.alert("Success", "Password updated successfully. Please login with your new password.", [
+                { text: "OK", onPress: () => navigation.navigate('LoginScreen') }
+            ])
+        } catch (error: any) {
+            Alert.alert("Error", error.message)
+        } finally {
+            setIsLoading(false)
+        }
+    }
 
     return (
         <Page>
@@ -70,7 +104,8 @@ const ResetPasswordScreen = ({ navigation }: ResetPasswordScreenProps) => {
             <Gap height={SPACING.SEMI_MEDIUM} />
             <AppButton
                 title="Update Password"
-                onPress={() => { }}
+                loading={isLoading}
+                onPress={handleSubmit(onUpdatePassword)}
                 style={styles.buttonStyle}
                 fullWidth
             />

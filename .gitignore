@@ -86,3 +86,10 @@ dist/
 web-build/
 # react-native-config codegen
 ios/tmp.xcconfig
+
+# Env files
+.env
+.env.local
+.env.*
+!.env.example
+

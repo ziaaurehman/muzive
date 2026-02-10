@@ -1,0 +1,22 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // OTP docs: e.g., 'uid-verify' — only owner can read/write
+    match /otps/{docId} {
+      allow read, write: if request.auth != null && docId.matches(request.auth.uid + '-verify');
+      allow delete: if true;  // Server cleanup
+    }
+    
+    // Deny everything else by default (expand later for users/events)
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    match /users/{userId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      allow create, update: if request.auth != null && request.auth.uid == userId;
+      allow delete: if false;  // or admin only later
+    }
+  }
+}

@@ -16,12 +16,13 @@ import { calculateRemainingSelection, formatTime } from "@src/utils/code.expires
 
 let otpExpiryTime: number | null = null;
 const OTP_DURATION = 15 * 60 * 1000;
-let dummyCode = '123456';
-
+import { callVerifyOTP, callSendVerificationOTP } from "../../../lib/firebase/functions";
+import { Alert } from "react-native";
 
 const VerifyEmailScreen = ({ navigation, route }: VerifyEmailScreenProps) => {
     const { colors } = useTheme()
     const styles = createStyles(colors)
+    const [isLoading, setIsLoading] = useState(false);
     const codeInputs = [
         useRef<TextInput>(null),
         useRef<TextInput>(null),
@@ -67,16 +68,25 @@ const VerifyEmailScreen = ({ navigation, route }: VerifyEmailScreenProps) => {
     }, [codeExpired]);
 
 
-    const handleResend = () => {
+    const handleResend = async () => {
         if (attempt >= 5) {
-            setErrorMessage('You have send 5 maximum attempts in 24 hours, please try again after 24 hours')
+            setErrorMessage('You have sent 5 maximum attempts in 24 hours, please try again after 24 hours')
             setIsResendDisabled(true)
         } else {
-            setErrorMessage('')
-            otpExpiryTime = Date.now() + OTP_DURATION;
-            setTimeLeft(OTP_DURATION / 1000);
-            setAttempt(attempt + 1);
-            setOtp(['', '', '', '', '', '']);
+            try {
+                setIsLoading(true)
+                await callSendVerificationOTP()
+                setErrorMessage('')
+                otpExpiryTime = Date.now() + OTP_DURATION;
+                setTimeLeft(OTP_DURATION / 1000);
+                setAttempt(attempt + 1);
+                setOtp(['', '', '', '', '', '']);
+                Alert.alert("Success", "Verification code resent successfully.")
+            } catch (error: any) {
+                setErrorMessage(error.message)
+            } finally {
+                setIsLoading(false)
+            }
         }
     };
 
@@ -105,14 +115,22 @@ const VerifyEmailScreen = ({ navigation, route }: VerifyEmailScreenProps) => {
         }
     };
 
-    const validateOtp = () => {
+    const validateOtp = async () => {
         const otpString = otp.join('');
+        if (otpString.length < 6) {
+            setErrorMessage('Please enter the 6-digit code.')
+            return
+        }
 
-        if (dummyCode === otpString) {
-            navigation.navigate('EmailVerifiedScreen')
+        setIsLoading(true)
+        try {
+            await callVerifyOTP(otpString)
             setErrorMessage('')
-        } else {
-            setErrorMessage('Incorrect code. Please try again.')
+            navigation.navigate('EmailVerifiedScreen')
+        } catch (error: any) {
+            setErrorMessage(error.message || 'Incorrect code. Please try again.')
+        } finally {
+            setIsLoading(false)
         }
     }
 
@@ -147,6 +165,7 @@ const VerifyEmailScreen = ({ navigation, route }: VerifyEmailScreenProps) => {
             <Gap height={SPACING.MEDIUM_PLUS} />
             <AppButton
                 title="Verify"
+                loading={isLoading}
                 onPress={validateOtp}
                 style={styles.buttonStyle}
                 fullWidth

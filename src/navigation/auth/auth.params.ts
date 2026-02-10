@@ -6,8 +6,8 @@ export type AuthParamsList = {
     RegisterScreen: undefined;
     LoginScreen: undefined;
     ForgotPasswordScreen: undefined;
-    ResetPasswordScreen: undefined;
-    OtpVerificationScreen: undefined;
+    ResetPasswordScreen: undefined | { email: string; resetToken: string };
+    OtpVerificationScreen: undefined | { email: string };
     VerifyEmailScreen: undefined | { email: string };
     EmailVerifiedScreen: undefined;
     MusicStylesScreen: undefined;

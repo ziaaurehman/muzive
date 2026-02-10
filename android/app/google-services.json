@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "294527245090",
+    "project_id": "muzive-ff880",
+    "storage_bucket": "muzive-ff880.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:294527245090:android:4558779f81806568bc637b",
+        "android_client_info": {
+          "package_name": "com.muzive"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkcMAqpNqhOzU9r598TjYltiz8IHEiM6Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

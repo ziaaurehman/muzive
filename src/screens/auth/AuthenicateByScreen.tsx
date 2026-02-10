@@ -14,9 +14,27 @@ import Caption from "@src/components/typography/Caption"
 import { AuthenicateByProps } from "@src/navigation/auth/auth.params"
 import Column from "@src/components/layout/Column"
 
+import { signInAsGuest } from "../../../lib/firebase/auth";
+import { Alert } from "react-native";
+import { useState } from "react";
+
 const AuthenicateByScreen = ({ navigation }: AuthenicateByProps) => {
     const { colors } = useTheme()
     const styles = createStyles(colors)
+    const [isLoading, setIsLoading] = useState(false)
+
+    const handleGuestLogin = async () => {
+        setIsLoading(true)
+        try {
+            await signInAsGuest()
+            console.log("Logged in as guest")
+        } catch (error: any) {
+            Alert.alert("Guest Mode Failed", error.message)
+        } finally {
+            setIsLoading(false)
+        }
+    }
+
     return (
         <Page >
             <Title style={styles.title}  >Muzive</Title>
@@ -45,7 +63,8 @@ const AuthenicateByScreen = ({ navigation }: AuthenicateByProps) => {
             <Gap height={SPACING.EXTRA_SMALL} />
             <AppButton
                 title="Continue as Guest User"
-                onPress={() => { }}
+                loading={isLoading}
+                onPress={handleGuestLogin}
                 fullWidth
                 buttonType="outline"
             />
