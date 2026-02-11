@@ -1,5 +1,6 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootParamList } from "../root.params";
+import { RegisterFormSchema } from "@src/schemas/auth/register.form.schema";
 
 export type AuthParamsList = {
     AuthenicateByScreen: undefined;
@@ -8,14 +9,14 @@ export type AuthParamsList = {
     ForgotPasswordScreen: undefined;
     ResetPasswordScreen: undefined | { email: string; resetToken: string };
     OtpVerificationScreen: undefined | { email: string };
-    VerifyEmailScreen: undefined | { email: string };
+    VerifyEmailScreen: undefined | { data: RegisterFormSchema };
     EmailVerifiedScreen: undefined;
     MusicStylesScreen: undefined;
     GoogleAuthScreen: undefined | { authType: 'login' | 'register' };
 }
 
 export type LoginScreenProps = NativeStackScreenProps<
-    AuthParamsList & Pick<RootParamList, 'AuthNavigator'>,
+    AuthParamsList & Pick<RootParamList, 'MainNavigator'>,
     'LoginScreen'
 >;
 
@@ -35,7 +36,7 @@ export type ResetPasswordScreenProps = NativeStackScreenProps<
 >;
 
 export type AuthenicateByProps = NativeStackScreenProps<
-    AuthParamsList,
+    AuthParamsList & Pick<RootParamList, 'MainNavigator'>,
     'AuthenicateByScreen'
 >;
 
@@ -55,7 +56,7 @@ export type EmailVerifiedScreenProps = NativeStackScreenProps<
 >;
 
 export type MusicStylesScreenProps = NativeStackScreenProps<
-    AuthParamsList,
+    AuthParamsList & Pick<RootParamList, 'MainNavigator'>,
     'MusicStylesScreen'
 >;
 

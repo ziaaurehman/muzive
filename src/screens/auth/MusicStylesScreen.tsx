@@ -4,15 +4,15 @@ import Subtitle from "@src/components/typography/SubTitle";
 import Title from "@src/components/typography/Title";
 import { ThemeColor } from "@src/theme/interfaces/theme.color";
 import { BORDERS, FONT_WEIGHTS, RADIUS, SPACING } from "@src/utils/constants";
-import { ScrollView, StyleSheet, TouchableOpacity, View } from "react-native";
+import { Alert, ScrollView, StyleSheet, TouchableOpacity, View } from "react-native";
 import { useTheme } from "@src/theme/ThemeProvider";
 import Caption from "@src/components/typography/Caption";
 import AppButton from "@src/components/buttons/AppButton";
 import Row from "@src/components/layout/Row";
 import { MusicStylesScreenProps } from "@src/navigation/auth/auth.params";
 import { useState } from "react";
-import Body from "@src/components/typography/Body";
 import Footnote from "@src/components/typography/Footnote";
+import { callUpdateMusicStyles } from "../../../lib/firebase/functions";
 
 
 const ALL_MUSIC_STYLES = [
@@ -61,6 +61,8 @@ const MusicStylesScreen = ({ navigation }: MusicStylesScreenProps) => {
     const styles = createStyles(colors)
     const [selectedStyles, setSelectedStyles] = useState<string[]>([]);
     const [isExpanded, setIsExpanded] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+
 
     const toggleStyle = (style: string) => {
         if (selectedStyles.includes(style)) {
@@ -72,6 +74,24 @@ const MusicStylesScreen = ({ navigation }: MusicStylesScreenProps) => {
 
     const visibleStyles = isExpanded ? ALL_MUSIC_STYLES : ALL_MUSIC_STYLES.slice(0, INITIAL_VISIBLE_COUNT);
     const isLimitReached = selectedStyles.length >= 10;
+
+    const handleContinue = async () => {
+        try {
+            setIsLoading(true)
+            await callUpdateMusicStyles(selectedStyles)
+            Alert.alert("Music Styles", "Music styles updated successfully", [
+                {
+                    text: "OK",
+                    onPress: () => { }
+                    // onPress: () => navigation.replace('MainNavigator', { screen: 'HomeScreen' })
+                }
+            ])
+        } catch (error: any) {
+            Alert.alert("Music Styles", error.message)
+        } finally {
+            setIsLoading(false)
+        }
+    }
 
     return (
         <Page>
@@ -131,7 +151,9 @@ const MusicStylesScreen = ({ navigation }: MusicStylesScreenProps) => {
                     />
                     <AppButton
                         title="Continue"
-                        onPress={() => { }}
+                        onPress={handleContinue}
+                        loading={isLoading}
+                        disabled={isLoading}
                         style={styles.continueButton}
                     />
                 </Row>

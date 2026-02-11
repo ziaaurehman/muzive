@@ -68,6 +68,7 @@ export const signInWithGoogle = async (idToken: string): Promise<User> => {
     try {
         const credential = GoogleAuthProvider.credential(idToken);
         const userCredential = await signInWithCredential(auth, credential);
+
         if (!userCredential.user) throw new Error("User not found after Google sign in");
         return userCredential.user;
     } catch (error: any) {
@@ -91,8 +92,27 @@ export const signInAsGuest = async (): Promise<User> => {
 // ── Sign Out
 export const logout = async (): Promise<void> => {
     try {
+        // Import dynamically to avoid requirement if not used elsewhere, 
+        // but since we use it in LoginScreen it's already a dependency.
+        const { GoogleSignin } = require('@react-native-google-signin/google-signin');
+
+        // Comprehensive sign out:
+        // 1. Google Sign Out (if applicable)
+        try {
+            if (await GoogleSignin.isSignedIn()) {
+                await GoogleSignin.signOut();
+            }
+        } catch (e) {
+            console.log("Google Sign out error (ignored):", e);
+        }
+
+        // 2. Firebase Sign Out
         await signOut(auth);
     } catch (error: any) {
+        // If the error is that no user is signed in, we can consider this a successful logout
+        if (error.code === 'auth/no-current-user') {
+            return;
+        }
         console.error("Sign out error:", error);
         throw new Error("Failed to sign out");
     }

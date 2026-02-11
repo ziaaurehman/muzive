@@ -12,7 +12,20 @@
           "package_name": "com.muzive"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "294527245090-6901trdq9jsgd4hqoa1758rvuo2gmvrs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.muzive",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "294527245090-ukhtfja3ppuh7gbl7b1vuj4l4jc5kskp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBkcMAqpNqhOzU9r598TjYltiz8IHEiM6Y"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "294527245090-ukhtfja3ppuh7gbl7b1vuj4l4jc5kskp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "294527245090-uerrt79ac70g5uch9a0i0lr9vn2jodlm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.muzive.app"
+              }
+            }
+          ]
         }
       }
     }

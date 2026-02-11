@@ -12,24 +12,67 @@ import Row from "@src/components/layout/Row"
 import Divider from "@src/components/layout/Divider"
 import Caption from "@src/components/typography/Caption"
 import { AuthenicateByProps } from "@src/navigation/auth/auth.params"
-import Column from "@src/components/layout/Column"
 
-import { signInAsGuest } from "../../../lib/firebase/auth";
+import { signInAsGuest, signInWithGoogle } from "../../../lib/firebase/auth";
 import { Alert } from "react-native";
-import { useState } from "react";
+import { getUserProfile } from "../../../lib/firebase/firestore";
+import { callCreateUserProfile } from "../../../lib/firebase/functions";
+import { useEffect, useState } from "react";
+import { GoogleSignin } from "@react-native-google-signin/google-signin"
 
 const AuthenicateByScreen = ({ navigation }: AuthenicateByProps) => {
     const { colors } = useTheme()
     const styles = createStyles(colors)
     const [isLoading, setIsLoading] = useState(false)
 
+    useEffect(() => {
+        GoogleSignin.configure({
+            webClientId: '294527245090-ukhtfja3ppuh7gbl7b1vuj4l4jc5kskp.apps.googleusercontent.com',
+            offlineAccess: true,
+        });
+    }, []);
+
     const handleGuestLogin = async () => {
         setIsLoading(true)
         try {
             await signInAsGuest()
-            console.log("Logged in as guest")
+            navigation.replace('MainNavigator', { screen: 'HomeScreen' })
         } catch (error: any) {
             Alert.alert("Guest Mode Failed", error.message)
+        } finally {
+            setIsLoading(false)
+        }
+    }
+
+    const onGoogleLogin = async () => {
+        setIsLoading(true)
+        try {
+            await GoogleSignin.hasPlayServices();
+            const response = await GoogleSignin.signIn();
+            const idToken = response.data?.idToken;
+
+            if (idToken) {
+                const user = await signInWithGoogle(idToken);
+                // Check if user has music styles
+                const profile = await getUserProfile(user.uid);
+
+                if (!profile) {
+                    await callCreateUserProfile(user.displayName ?? 'User');
+                    navigation.replace('MusicStylesScreen');
+                    return;
+                }
+
+                if (profile.musicStyles && profile.musicStyles.length > 0) {
+                    navigation.replace('MainNavigator', { screen: 'HomeScreen' })
+                } else {
+                    navigation.replace('MusicStylesScreen')
+                }
+            } else {
+                throw new Error("Google Sign-In failed: No ID Token found");
+            }
+        } catch (error: any) {
+            console.error("Google Login Error:", error);
+            Alert.alert("Login Failed", error.message);
         } finally {
             setIsLoading(false)
         }
@@ -43,7 +86,7 @@ const AuthenicateByScreen = ({ navigation }: AuthenicateByProps) => {
             <Gap height={SPACING.MEDIUM_PLUS} />
             <AppButton
                 title="Sign Up with Google"
-                onPress={() => { navigation.navigate('GoogleAuthScreen', { authType: 'register' }) }}
+                onPress={onGoogleLogin}
                 buttonType="secondary"
                 fullWidth
                 icon={<GoogleIcon />}

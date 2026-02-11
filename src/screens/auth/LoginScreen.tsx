@@ -4,7 +4,7 @@ import Subtitle from "@src/components/typography/SubTitle";
 import Title from "@src/components/typography/Title";
 import { ThemeColor } from "@src/theme/interfaces/theme.color";
 import { BORDERS, FONT_WEIGHTS, SPACING } from "@src/utils/constants";
-import { Pressable, StyleSheet, View } from "react-native";
+import { Pressable, StyleSheet } from "react-native";
 import { useTheme } from "@src/theme/ThemeProvider";
 import Caption from "@src/components/typography/Caption";
 import Input from "@src/components/input/Input";
@@ -13,16 +13,20 @@ import AppButton from "@src/components/buttons/AppButton";
 import { adaptiveSize } from "@src/utils/scaleUtils";
 import Row from "@src/components/layout/Row";
 import { GoogleIcon } from "@src/assets/svg/auth/assets";
-import { LoginScreenProps, RegisterScreenProps } from "@src/navigation/auth/auth.params";
-import Column from "@src/components/layout/Column";
+import { LoginScreenProps } from "@src/navigation/auth/auth.params";
 import AppIcon from "@src/components/icons/AppIcon";
 import ICONS from "@src/utils/icons";
 import { useState } from "react";
 import { LoginFormSchema, loginSchema } from "@src/schemas/auth/login.schema";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-import { signInWithEmail } from "../../../lib/firebase/auth";
+import { signInWithEmail, signInWithGoogle } from "../../../lib/firebase/auth";
 import { Alert } from "react-native";
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
+import { useEffect } from "react";
+import Config from "react-native-config";
+import { callSendVerificationOTP, callCreateUserProfile } from "../../../lib/firebase/functions";
+import { getUserProfile } from "../../../lib/firebase/firestore";
 
 const LoginScreen = ({ navigation }: LoginScreenProps) => {
     const { colors } = useTheme()
@@ -34,19 +38,65 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
     })
     const [remember, setRemember] = useState(false)
 
+    useEffect(() => {
+        GoogleSignin.configure({
+            webClientId: '294527245090-ukhtfja3ppuh7gbl7b1vuj4l4jc5kskp.apps.googleusercontent.com',
+            offlineAccess: true,
+        });
+    }, []);
+
     const password = watch('password')
     const email = watch('email')
 
     const onLogin = async (data: LoginFormSchema) => {
         setIsLoading(true)
         try {
-            await signInWithEmail(data.email, data.password)
-            // Navigation will be handled by RootNavigator if useAuth hook is used there,
-            // or we can manually navigate if needed. 
-            // For now, let's assume successful login leads elsewhere or we just show success.
-            console.log("Logged in successfully")
+            const user = await signInWithEmail(data.email, data.password)
+            if (user?.emailVerified) {
+                const profile = await getUserProfile(user.uid);
+                if (profile && profile.musicStyles && profile.musicStyles.length > 0) {
+                    navigation.replace('MainNavigator', { screen: 'HomeScreen' })
+                } else {
+                    navigation.replace('MusicStylesScreen')
+                }
+            } else {
+                await callSendVerificationOTP()
+                navigation.replace('VerifyEmailScreen')
+            }
         } catch (error: any) {
             Alert.alert("Login Failed", error.message)
+        } finally {
+            setIsLoading(false)
+        }
+    }
+
+    const onGoogleLogin = async () => {
+        setIsLoading(true)
+        try {
+            await GoogleSignin.hasPlayServices();
+            const response = await GoogleSignin.signIn();
+            const idToken = response.data?.idToken;
+
+            if (idToken) {
+                const user = await signInWithGoogle(idToken);
+                const profile = await getUserProfile(user.uid);
+
+                if (!profile) {
+                    await callCreateUserProfile(user.displayName ?? 'User');
+                    navigation.replace('MusicStylesScreen');
+                    return;
+                }
+
+                if (profile.musicStyles && profile.musicStyles.length > 0) {
+                    navigation.replace('MainNavigator', { screen: 'HomeScreen' })
+                } else {
+                    navigation.replace('MusicStylesScreen')
+                }
+            } else {
+                throw new Error("Google Sign-In failed: No ID Token found");
+            }
+        } catch (error: any) {
+            Alert.alert("Login Failed", error.message);
         } finally {
             setIsLoading(false)
         }
@@ -71,10 +121,12 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
             />
             {email?.includes('@gmail.com') &&
                 <>
+                    <Gap height={SPACING.EXTRA_SMALL} />
+                    <Caption tone='input-critical'>Looks like you're using a Gmail -- login with Google to continue</Caption>
                     <Gap height={SPACING.SEMI_MEDIUM} />
                     <AppButton
-                        title="Sign Up with Google"
-                        onPress={() => { navigation.navigate('GoogleAuthScreen', { authType: 'login' }) }}
+                        title="Login with Google"
+                        onPress={onGoogleLogin}
                         buttonType="secondary"
                         fullWidth
                         icon={<GoogleIcon />}

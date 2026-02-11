@@ -18,12 +18,12 @@ import { GoogleIcon } from "@src/assets/svg/auth/assets";
 import { RegisterScreenProps } from "@src/navigation/auth/auth.params";
 import { RegisterFormSchema, registerSchema } from "@src/schemas/auth/register.form.schema";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useValidationRules } from "@src/utils/password.utils";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-import { signUpWithEmail } from "../../../lib/firebase/auth";
+import { signInWithGoogle, signUpWithEmail } from "../../../lib/firebase/auth";
 import { callCreateUserProfile, callSendVerificationOTP } from "../../../lib/firebase/functions";
 import { Alert } from "react-native";
+import { GoogleSignin } from "@react-native-google-signin/google-signin";
 
 const RegisterScreen = ({ navigation }: RegisterScreenProps) => {
     const { colors } = useTheme()
@@ -43,20 +43,44 @@ const RegisterScreen = ({ navigation }: RegisterScreenProps) => {
     const password = watch('password')
     const email = watch('email')
 
+    useEffect(() => {
+        GoogleSignin.configure({
+            webClientId: '294527245090-ukhtfja3ppuh7gbl7b1vuj4l4jc5kskp.apps.googleusercontent.com',
+            offlineAccess: true,
+        });
+    }, []);
+
+    const onGoogleRegister = async () => {
+        setIsLoading(true)
+        try {
+            await GoogleSignin.hasPlayServices();
+            const response = await GoogleSignin.signIn();
+            const idToken = response.data?.idToken;
+
+            if (idToken) {
+                const user = await signInWithGoogle(idToken);
+                if (user) {
+                    await callCreateUserProfile(user.displayName ?? '')
+                    navigation.replace('MusicStylesScreen')
+                }
+            } else {
+                throw new Error("Google Sign-In failed: No ID Token found");
+            }
+        } catch (error: any) {
+            console.error("Google Login Error:", error);
+            Alert.alert("Login Failed", error.message);
+        } finally {
+            setIsLoading(false)
+        }
+    }
+
+
     const onRegister = async (data: RegisterFormSchema) => {
         setIsLoading(true)
         try {
-            // 1. Create the user
             await signUpWithEmail(data.email, data.password)
-
-            // 2. Create the user profile (save name)
-            // await callCreateUserProfile(data.name)
-
-            // 3. Trigger OTP verification email/sms
             await callSendVerificationOTP()
-
-            // 4. Navigate to Verify Email Screen
-            navigation.navigate('VerifyEmailScreen', { email: data.email })
+            navigation.navigate('VerifyEmailScreen', { data })
         } catch (error: any) {
             Alert.alert("Registration Failed", error.message)
         } finally {
@@ -96,7 +120,7 @@ const RegisterScreen = ({ navigation }: RegisterScreenProps) => {
                     <Gap height={SPACING.SEMI_MEDIUM} />
                     <AppButton
                         title="Sign Up with Google"
-                        onPress={() => { navigation.navigate('GoogleAuthScreen', { authType: 'register' }) }}
+                        onPress={onGoogleRegister}
                         buttonType="secondary"
                         fullWidth
                         icon={<GoogleIcon />}

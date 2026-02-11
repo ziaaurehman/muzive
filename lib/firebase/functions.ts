@@ -15,7 +15,7 @@ export const callSendVerificationOTP = async () => {
         if (error.code === 'functions/internal') {
             throw new Error('Failed to send code. Try again :(  .');
         }
-        console.log('otp error here --> ', { error });
+        console.log({ error });
         throw error;
     }
 };
@@ -106,5 +106,21 @@ export const callResetPassword = async (email: string, newPassword: string, rese
             throw new Error("Invalid password or token.");
         }
         throw new Error("Failed to reset password.");
+    }
+};
+
+export const callUpdateMusicStyles = async (musicStyles: string[]) => {
+    const callable = httpsCallable(functions, "updateMusicStyles");
+    try {
+        await callable({ musicStyles });
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (error: any) {
+        if (error.code === "functions/invalid-argument") {
+            throw new Error(error.message || "Invalid selection.");
+        }
+        if (error.code === "functions/unauthenticated") {
+            throw new Error("Please sign in again.");
+        }
+        throw new Error("Failed to save music styles. Please try again.");
     }
 };

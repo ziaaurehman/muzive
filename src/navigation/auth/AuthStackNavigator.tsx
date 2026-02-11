@@ -13,12 +13,14 @@ import GoogleAuthScreen from "@src/screens/auth/GoogleAuthScreen";
 
 const Stack = createNativeStackNavigator<AuthParamsList>();
 
-const AuthStackNavigator = () => {
+const AuthStackNavigator = ({ route }: any) => {
     const { Navigator, Screen } = Stack;
+    const initialRouteName = route?.params?.initialRouteName || 'AuthenicateByScreen';
+
     return (
         <Navigator
             screenOptions={{ headerShown: false }}
-            initialRouteName='AuthenicateByScreen'
+            initialRouteName={initialRouteName}
         >
             <Screen name="AuthenicateByScreen" component={AuthenicateByScreen} />
             <Screen name="RegisterScreen" component={RegisterScreen} />
