@@ -23,40 +23,25 @@ export type UserCredential = FirebaseAuthTypes.UserCredential;
 export const signUpWithEmail = async (
     email: string,
     password: string
-) => {
-    return createUserWithEmailAndPassword(getAuth(), email, password)
-        .then((user) => {
-            console.log('User account created & signed in!');
-            return user.user;
-        })
-        .catch(error => {
-            if (error.code === 'auth/email-already-in-use') {
-                console.log('That email address is already in use!');
-            }
-
-            if (error.code === 'auth/invalid-email') {
-                console.log('That email address is invalid!');
-            }
-
-            console.error(error);
-            throw new Error(error.message || "Failed to create account");
-        });
-    // try {
-    //     console.log('🔐 Attempting sign up with:', { email });
-    //     console.log('📡 Auth instance:', auth ? 'Available' : 'Undefined');
-    //     const userCredential = await createUserWithEmailAndPassword(
-    //         auth,
-    //         email,
-    //         password
-    //     );
-    //     if (!userCredential.user) throw new Error("User not found after sign up");
-    //     return userCredential.user;
-    // } catch (error: any) {
-    //     console.error("Sign up error:");
-    //     console.log({ error });
-
-    //     throw new Error(error.message || "Failed to create account");
-    // }
+): Promise<User> => {
+    try {
+        const userCredential = await createUserWithEmailAndPassword(
+            auth,
+            email,
+            password
+        );
+        if (!userCredential.user) throw new Error("User not found after sign up");
+        return userCredential.user;
+    } catch (error: any) {
+        if (error.code === 'auth/email-already-in-use') {
+            console.log('❌ That email address is already in use!');
+        }
+        if (error.code === 'auth/invalid-email') {
+            console.log('❌ That email address is invalid!');
+        }
+        console.error("Sign up error:", error);
+        throw new Error(error.message || "Failed to create account");
+    }
 };
 
 // ── Email/Password Sign In

@@ -1,0 +1,305 @@
+[debug] [2026-02-10T23:10:37.900Z] ----------------------------------------------------------------------
+[debug] [2026-02-10T23:10:37.905Z] Command:       /Users/macbook/.nvm/versions/node/v20.19.2/bin/node /Users/macbook/.nvm/versions/node/v20.19.2/bin/firebase emulators:start --project muzive-ff880
+[debug] [2026-02-10T23:10:37.905Z] CLI Version:   15.2.0
+[debug] [2026-02-10T23:10:37.905Z] Platform:      darwin
+[debug] [2026-02-10T23:10:37.905Z] Node Version:  v20.19.2
+[debug] [2026-02-10T23:10:37.906Z] Time:          Wed Feb 11 2026 04:10:37 GMT+0500 (Pakistan Standard Time)
+[debug] [2026-02-10T23:10:37.906Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-10T23:10:39.858Z] Object "" in "firebase.json" has unknown property: {"additionalProperty":"react-native"}
+[debug] [2026-02-10T23:10:39.864Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-10T23:10:39.864Z] > authorizing via signed-in user (ziaareact@gmail.com)
+[debug] [2026-02-10T23:10:40.002Z] openjdk version "21.0.10" 2026-01-20
+
+[debug] [2026-02-10T23:10:40.002Z] OpenJDK Runtime Environment Homebrew (build 21.0.10)
+OpenJDK 64-Bit Server VM Homebrew (build 21.0.10, mixed mode, sharing)
+
+[debug] [2026-02-10T23:10:40.008Z] Parsed Java major version: 21
+[info] i  emulators: Starting emulators: auth, functions, firestore, extensions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, extensions"}}
+[debug] [2026-02-10T23:10:40.012Z] Checked if tokens are valid: true, expires at: 1770768168986
+[debug] [2026-02-10T23:10:40.012Z] Checked if tokens are valid: true, expires at: 1770768168986
+[debug] [2026-02-10T23:10:40.013Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/muzive-ff880 [none]
+[debug] [2026-02-10T23:10:41.716Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/muzive-ff880 200
+[debug] [2026-02-10T23:10:41.717Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/muzive-ff880 {"projectNumber":"294527245090","projectId":"muzive-ff880","lifecycleState":"ACTIVE","name":"muzive","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-01-26T14:49:20.097195Z"}
+[debug] [2026-02-10T23:10:43.610Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-10T23:10:43.610Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-10T23:10:43.610Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-10T23:10:43.610Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-10T23:10:43.610Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2026-02-10T23:10:43.617Z] Write emulator hub locator at /var/folders/n3/9j33zyds20sb_ncq1j0t9ccw0000gn/T/hub-muzive-ff880.json
+[debug] [2026-02-10T23:10:43.625Z] [Extensions] Started Extensions emulator, this is a noop.
+[debug] [2026-02-10T23:10:44.757Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-10T23:10:44.758Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-10T23:10:44.758Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-10T23:10:44.758Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2026-02-10T23:10:44.777Z] defaultcredentials: writing to file /Users/macbook/.config/firebase/ziaareact_gmail_com_application_default_credentials.json
+[debug] [2026-02-10T23:10:44.780Z] Setting GAC to /Users/macbook/.config/firebase/ziaareact_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/macbook/.config/firebase/ziaareact_gmail_com_application_default_credentials.json"}}
+[debug] [2026-02-10T23:10:44.781Z] Checked if tokens are valid: true, expires at: 1770768168986
+[debug] [2026-02-10T23:10:44.781Z] Checked if tokens are valid: true, expires at: 1770768168986
+[debug] [2026-02-10T23:10:44.781Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/muzive-ff880/adminSdkConfig [none]
+[debug] [2026-02-10T23:10:45.418Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/muzive-ff880/adminSdkConfig 200
+[debug] [2026-02-10T23:10:45.418Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/muzive-ff880/adminSdkConfig {"projectId":"muzive-ff880","storageBucket":"muzive-ff880.firebasestorage.app"}
+[debug] [2026-02-10T23:10:45.461Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-02-10T23:10:45.461Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2026-02-10T23:10:45.462Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/macbook/.cache/firebase/emulators/cloud-firestore-emulator-v1.20.2.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","muzive-ff880","--rules","/Users/macbook/Documents/GitHub/muzive/firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8080} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/macbook/.cache/firebase/emulators/cloud-firestore-emulator-v1.20.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"muzive-ff880\",\"--rules\",\"/Users/macbook/Documents/GitHub/muzive/firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8080}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2026-02-10T23:10:47.806Z] Feb 11, 2026 4:10:47 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Feb 11, 2026 4:10:47 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
+[debug] [2026-02-10T23:10:47.846Z] API endpoint: http://127.0.0.1:8080 {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://127.0.0.1:8080"}}
+[debug] [2026-02-10T23:10:47.846Z] 
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
+
+If you are running a Firestore in Datastore Mode project, run:
+
+   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080
+
+Note: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nIf you are running a Firestore in Datastore Mode project, run:\n\n   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080\n\nNote: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.\nDev App Server is now running.\n\n"}}
+[info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2026-02-10T23:10:57.970Z] [Extensions] Connecting Extensions emulator, this is a noop.
+[info] i  functions: Watching "/Users/macbook/Documents/GitHub/muzive/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/macbook/Documents/GitHub/muzive/functions\" for Cloud Functions..."}}
+[debug] [2026-02-10T23:10:57.978Z] Validating nodejs source
+[debug] [2026-02-10T23:10:59.389Z] > [functions] package.json contents: {
+  "name": "functions",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.6",
+    "cors": "^2.8.6",
+    "crypto-js": "^4.2.0",
+    "firebase-admin": "^13.6.1",
+    "firebase-functions": "^7.0.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3"
+  }
+}
+[debug] [2026-02-10T23:10:59.389Z] Building nodejs source
+[debug] [2026-02-10T23:10:59.390Z] Failed to find version of module node: reached end of search path /Users/macbook/Documents/GitHub/muzive/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-02-10T23:10:59.394Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-02-10T23:10:59.405Z] Found firebase-functions binary at '/Users/macbook/Documents/GitHub/muzive/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8023
+
+[error] API key does not start with "SG.".
+
+[debug] [2026-02-10T23:11:00.227Z] Got response from /__/functions.yaml {"endpoints":{"sendVerificationOTP":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"sendVerificationOTP"},"verifyOTP":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"verifyOTP"},"createUserProfile":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"createUserProfile"},"sendPasswordResetOTP":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"sendPasswordResetOTP"},"verifyPasswordResetOTP":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"verifyPasswordResetOTP"},"resetPassword":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"resetPassword"},"updateMusicStyles":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"updateMusicStyles"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-02-10T23:11:04.277Z] defaultcredentials: writing to file /Users/macbook/.config/firebase/ziaareact_gmail_com_application_default_credentials.json
+[debug] [2026-02-10T23:11:04.277Z] Setting GAC to /Users/macbook/.config/firebase/ziaareact_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/macbook/.config/firebase/ziaareact_gmail_com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: sendVerificationOTP, verifyOTP, createUserProfile, sendPasswordResetOTP, verifyPasswordResetOTP, resetPassword, updateMusicStyles. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendVerificationOTP, verifyOTP, createUserProfile, sendPasswordResetOTP, verifyPasswordResetOTP, resetPassword, updateMusicStyles."}}
+[info] ✔  functions[asia-south1-sendVerificationOTP]: http function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/sendVerificationOTP). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/sendVerificationOTP)."}}
+[info] ✔  functions[asia-south1-verifyOTP]: http function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/verifyOTP). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/verifyOTP)."}}
+[info] ✔  functions[asia-south1-createUserProfile]: http function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/createUserProfile). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/createUserProfile)."}}
+[info] ✔  functions[asia-south1-sendPasswordResetOTP]: http function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/sendPasswordResetOTP). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/sendPasswordResetOTP)."}}
+[info] ✔  functions[asia-south1-verifyPasswordResetOTP]: http function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/verifyPasswordResetOTP). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/verifyPasswordResetOTP)."}}
+[info] ✔  functions[asia-south1-resetPassword]: http function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/resetPassword). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/resetPassword)."}}
+[info] ✔  functions[asia-south1-updateMusicStyles]: http function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/updateMusicStyles). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/updateMusicStyles)."}}
+[debug] [2026-02-10T23:11:04.290Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬──────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI              │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:4000/auth       │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions  │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore  │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Extensions     │ 127.0.0.1:5001 │ http://127.0.0.1:4000/extensions │
+└────────────────┴────────────────┴──────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500, 9150
+┌─────────────────────────┬───────────────┬─────────────────────┐
+│ Extension Instance Name │ Extension Ref │ View in Emulator UI │
+└─────────────────────────┴───────────────┴─────────────────────┘
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2026-02-10T23:11:06.126Z] Feb 11, 2026 4:11:06 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Feb 11, 2026 4:11:06 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2026-02-10T23:11:32.416Z] Feb 11, 2026 4:11:32 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Feb 11, 2026 4:11:32 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2026-02-10T23:11:32.435Z] Feb 11, 2026 4:11:32 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Feb 11, 2026 4:11:32 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2026-02-10T23:12:39.086Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/muzive-ff880/trigger_multicast [none]
+[debug] [2026-02-10T23:12:39.087Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/muzive-ff880/trigger_multicast {"eventId":"d63fbace-0883-411b-ab82-c7db67fea765","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/muzive-ff880","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2026-02-10T23:12:39.086Z","data":{"uid":"4XXTKsQL81sZe3lYgXiRGx1YxryS","email":"ziaareact@gmail.com","emailVerified":false,"metadata":{"creationTime":"2026-02-10T23:12:39.084Z","lastSignInTime":"2026-02-10T23:12:39.084Z"},"customClaims":{},"providerData":[{"rawId":"ziaareact@gmail.com","providerId":"password","email":"ziaareact@gmail.com","federatedId":"ziaareact@gmail.com"}]}}
+[debug] [2026-02-10T23:12:39.097Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/muzive-ff880/trigger_multicast 200
+[debug] [2026-02-10T23:12:39.098Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/muzive-ff880/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2026-02-10T23:12:39.151Z] [work-queue] {"queuedWork":["/muzive-ff880/asia-south1/sendVerificationOTP-2026-02-10T23:12:39.151Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-10T23:12:39.151Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/muzive-ff880/asia-south1/sendVerificationOTP-2026-02-10T23:12:39.151Z"],"workRunningCount":1}
+[debug] [2026-02-10T23:12:39.151Z] Accepted request POST /muzive-ff880/asia-south1/sendVerificationOTP --> asia-south1-sendVerificationOTP
+[debug] [2026-02-10T23:12:39.154Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-02-10T23:12:39.155Z] [functions] Got req.url=/muzive-ff880/asia-south1/sendVerificationOTP, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/muzive-ff880/asia-south1/sendVerificationOTP, mapping to path=/"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-02-10T23:12:39.160Z] [worker-pool] addWorker(asia-south1-sendVerificationOTP) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(asia-south1-sendVerificationOTP)"}}
+[debug] [2026-02-10T23:12:39.161Z] [worker-pool] Adding worker with key asia-south1-sendVerificationOTP, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key asia-south1-sendVerificationOTP, total=1"}}
+[debug] [2026-02-10T23:12:40.600Z] Feb 11, 2026 4:12:40 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Feb 11, 2026 4:12:40 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2026-02-10T23:12:40.602Z] Feb 11, 2026 4:12:40 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Feb 11, 2026 4:12:40 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2026-02-10T23:12:40.727Z] [runtime-status] [7873] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.6.1","resolution":"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [7873] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.6.1\",\"resolution\":\"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2026-02-10T23:12:40.728Z] [runtime-status] [7873] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.0.5","resolution":"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [7873] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.0.5\",\"resolution\":\"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2026-02-10T23:12:40.728Z] [runtime-status] [7873] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [7873] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2026-02-10T23:12:40.729Z] [runtime-status] [7873] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.0.5","resolution":"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [7873] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.0.5\",\"resolution\":\"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2026-02-10T23:12:40.729Z] [runtime-status] [7873] Detected firebase-functions v7+, skipping legacy stubs. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [7873] Detected firebase-functions v7+, skipping legacy stubs."}}
+[debug] [2026-02-10T23:12:40.729Z] [runtime-status] [7873] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.6.1","resolution":"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [7873] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.6.1\",\"resolution\":\"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2026-02-10T23:12:40.835Z] [runtime-status] [7873] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.0.5","resolution":"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [7873] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.0.5\",\"resolution\":\"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2026-02-10T23:12:41.199Z] [runtime-status] [7873] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"13.6.1","resolution":"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [7873] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"13.6.1\",\"resolution\":\"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2026-02-10T23:12:41.319Z] [runtime-status] [7873] Functions runtime initialized. {"cwd":"/Users/macbook/Documents/GitHub/muzive/functions","node_version":"20.19.2"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [7873] Functions runtime initialized. {\"cwd\":\"/Users/macbook/Documents/GitHub/muzive/functions\",\"node_version\":\"20.19.2\"}"}}
+[debug] [2026-02-10T23:12:41.320Z] [runtime-status] [7873] Listening to port: /var/folders/n3/9j33zyds20sb_ncq1j0t9ccw0000gn/T/fire_emu_f49348fbfb6d4c98.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [7873] Listening to port: /var/folders/n3/9j33zyds20sb_ncq1j0t9ccw0000gn/T/fire_emu_f49348fbfb6d4c98.sock"}}
+[debug] [2026-02-10T23:12:41.394Z] [worker-asia-south1-sendVerificationOTP-b1edd877-97ea-4d88-8db4-443fc927d7fd]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[worker-asia-south1-sendVerificationOTP-b1edd877-97ea-4d88-8db4-443fc927d7fd]: IDLE"}}
+[debug] [2026-02-10T23:12:41.394Z] [worker-pool] submitRequest(triggerId=asia-south1-sendVerificationOTP) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=asia-south1-sendVerificationOTP)"}}
+[info] i  functions: Beginning execution of "asia-south1-sendVerificationOTP" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Beginning execution of \"asia-south1-sendVerificationOTP\""}}
+[debug] [2026-02-10T23:12:41.395Z] [worker-asia-south1-sendVerificationOTP-b1edd877-97ea-4d88-8db4-443fc927d7fd]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[worker-asia-south1-sendVerificationOTP-b1edd877-97ea-4d88-8db4-443fc927d7fd]: BUSY"}}
+[info] >  {"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"verifications\":{\"app\":\"MISSING\",\"auth\":\"VALID\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[debug] [2026-02-10T23:12:41.787Z] Feb 11, 2026 4:12:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Feb 11, 2026 4:12:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
+[info] >  Attempting to send OTP to ziaareact@gmail.com... {"user":"Attempting to send OTP to ziaareact@gmail.com...","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"\u001b[90m> \u001b[39m Attempting to send OTP to ziaareact@gmail.com..."}}
+[info] >  Email sent successfully via SendGrid. {"user":"Email sent successfully via SendGrid.","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"\u001b[90m> \u001b[39m Email sent successfully via SendGrid."}}
+[debug] [2026-02-10T23:12:44.578Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "asia-south1-sendVerificationOTP" in 3183.798426ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Finished \"asia-south1-sendVerificationOTP\" in 3183.798426ms"}}
+[debug] [2026-02-10T23:12:44.579Z] [worker-asia-south1-sendVerificationOTP-b1edd877-97ea-4d88-8db4-443fc927d7fd]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[worker-asia-south1-sendVerificationOTP-b1edd877-97ea-4d88-8db4-443fc927d7fd]: IDLE"}}
+[debug] [2026-02-10T23:12:44.579Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-02-10T23:12:44.579Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-02-10T23:12:44.579Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-10T23:14:30.914Z] File /Users/macbook/Documents/GitHub/muzive/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/macbook/Documents/GitHub/muzive/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2026-02-10T23:14:31.917Z] Validating nodejs source
+[debug] [2026-02-10T23:14:33.153Z] > [functions] package.json contents: {
+  "name": "functions",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.6",
+    "cors": "^2.8.6",
+    "crypto-js": "^4.2.0",
+    "firebase-admin": "^13.6.1",
+    "firebase-functions": "^7.0.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3"
+  }
+}
+[debug] [2026-02-10T23:14:33.153Z] Building nodejs source
+[debug] [2026-02-10T23:14:33.153Z] Failed to find version of module node: reached end of search path /Users/macbook/Documents/GitHub/muzive/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-02-10T23:14:33.155Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-02-10T23:14:33.157Z] Found firebase-functions binary at '/Users/macbook/Documents/GitHub/muzive/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8312
+
+[error] API key does not start with "SG.".
+
+[debug] [2026-02-10T23:14:34.112Z] Got response from /__/functions.yaml {"endpoints":{"sendVerificationOTP":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"sendVerificationOTP"},"verifyOTP":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"verifyOTP"},"createUserProfile":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"createUserProfile"},"sendPasswordResetOTP":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"sendPasswordResetOTP"},"verifyPasswordResetOTP":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"verifyPasswordResetOTP"},"resetPassword":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"resetPassword"},"updateMusicStyles":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"updateMusicStyles"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-02-10T23:14:38.137Z] defaultcredentials: writing to file /Users/macbook/.config/firebase/ziaareact_gmail_com_application_default_credentials.json
+[debug] [2026-02-10T23:14:38.138Z] Setting GAC to /Users/macbook/.config/firebase/ziaareact_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/macbook/.config/firebase/ziaareact_gmail_com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: sendVerificationOTP, verifyOTP, createUserProfile, sendPasswordResetOTP, verifyPasswordResetOTP, resetPassword, updateMusicStyles. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendVerificationOTP, verifyOTP, createUserProfile, sendPasswordResetOTP, verifyPasswordResetOTP, resetPassword, updateMusicStyles."}}
+[debug] [2026-02-10T23:14:38.140Z] [worker-pool] Shutting down IDLE worker (asia-south1-sendVerificationOTP) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (asia-south1-sendVerificationOTP)"}}
+[debug] [2026-02-10T23:14:38.140Z] [worker-asia-south1-sendVerificationOTP-b1edd877-97ea-4d88-8db4-443fc927d7fd]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[worker-asia-south1-sendVerificationOTP-b1edd877-97ea-4d88-8db4-443fc927d7fd]: FINISHING"}}
+[debug] [2026-02-10T23:14:38.153Z] [worker-asia-south1-sendVerificationOTP-b1edd877-97ea-4d88-8db4-443fc927d7fd]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[worker-asia-south1-sendVerificationOTP-b1edd877-97ea-4d88-8db4-443fc927d7fd]: exited"}}
+[debug] [2026-02-10T23:14:38.154Z] [worker-asia-south1-sendVerificationOTP-b1edd877-97ea-4d88-8db4-443fc927d7fd]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[worker-asia-south1-sendVerificationOTP-b1edd877-97ea-4d88-8db4-443fc927d7fd]: FINISHED"}}
+[debug] [2026-02-10T23:14:51.996Z] File /Users/macbook/Documents/GitHub/muzive/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/macbook/Documents/GitHub/muzive/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2026-02-10T23:14:51.997Z] File /Users/macbook/Documents/GitHub/muzive/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/macbook/Documents/GitHub/muzive/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2026-02-10T23:14:52.998Z] Validating nodejs source
+[debug] [2026-02-10T23:14:54.069Z] > [functions] package.json contents: {
+  "name": "functions",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.6",
+    "cors": "^2.8.6",
+    "crypto-js": "^4.2.0",
+    "firebase-admin": "^13.6.1",
+    "firebase-functions": "^7.0.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3"
+  }
+}
+[debug] [2026-02-10T23:14:54.069Z] Building nodejs source
+[debug] [2026-02-10T23:14:54.069Z] Failed to find version of module node: reached end of search path /Users/macbook/Documents/GitHub/muzive/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-02-10T23:14:54.070Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-02-10T23:14:54.072Z] Found firebase-functions binary at '/Users/macbook/Documents/GitHub/muzive/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8933
+
+[error] SENDGRID_API_KEY is missing from process.env!
+
+[debug] [2026-02-10T23:14:54.601Z] Got response from /__/functions.yaml {"endpoints":{"sendVerificationOTP":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"sendVerificationOTP"},"verifyOTP":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"verifyOTP"},"createUserProfile":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"createUserProfile"},"sendPasswordResetOTP":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"sendPasswordResetOTP"},"verifyPasswordResetOTP":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"verifyPasswordResetOTP"},"resetPassword":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"resetPassword"},"updateMusicStyles":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"updateMusicStyles"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-02-10T23:14:58.623Z] defaultcredentials: writing to file /Users/macbook/.config/firebase/ziaareact_gmail_com_application_default_credentials.json
+[debug] [2026-02-10T23:14:58.624Z] Setting GAC to /Users/macbook/.config/firebase/ziaareact_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/macbook/.config/firebase/ziaareact_gmail_com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: sendVerificationOTP, verifyOTP, createUserProfile, sendPasswordResetOTP, verifyPasswordResetOTP, resetPassword, updateMusicStyles. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendVerificationOTP, verifyOTP, createUserProfile, sendPasswordResetOTP, verifyPasswordResetOTP, resetPassword, updateMusicStyles."}}
+[debug] [2026-02-10T23:17:23.017Z] Feb 11, 2026 4:17:23 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Feb 11, 2026 4:17:23 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2026-02-10T23:50:35.013Z] Feb 11, 2026 4:50:34 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Feb 11, 2026 4:50:34 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}

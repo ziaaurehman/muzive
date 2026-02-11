@@ -2,9 +2,11 @@ import { httpsCallable } from "@react-native-firebase/functions";
 import { functions } from './config';
 
 export const callSendVerificationOTP = async () => {
+    console.log('calling otp verficiation');
     const callable = httpsCallable(functions, 'sendVerificationOTP');
     try {
         await callable();
+        console.log('otp verficiation');
     } catch (error: any) {
         // Map errors for UI
         if (error.code === 'functions/too-many-requests') {
@@ -13,6 +15,7 @@ export const callSendVerificationOTP = async () => {
         if (error.code === 'functions/internal') {
             throw new Error('Failed to send code. Try again :(  .');
         }
+        console.log('otp error here --> ', { error });
         throw error;
     }
 };
