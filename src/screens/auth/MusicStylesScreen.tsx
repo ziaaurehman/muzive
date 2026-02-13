@@ -82,8 +82,7 @@ const MusicStylesScreen = ({ navigation }: MusicStylesScreenProps) => {
             Alert.alert("Music Styles", "Music styles updated successfully", [
                 {
                     text: "OK",
-                    onPress: () => { }
-                    // onPress: () => navigation.replace('MainNavigator', { screen: 'HomeScreen' })
+                    onPress: () => navigation.replace('MainNavigator', { screen: 'HomeScreen' })
                 }
             ])
         } catch (error: any) {

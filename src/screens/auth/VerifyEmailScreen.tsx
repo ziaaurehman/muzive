@@ -17,6 +17,7 @@ import { calculateRemainingSelection, formatTime } from "@src/utils/code.expires
 let otpExpiryTime: number | null = null;
 const OTP_DURATION = 15 * 60 * 1000;
 import { callVerifyOTP, callSendVerificationOTP, callCreateUserProfile } from "../../../lib/firebase/functions";
+import { auth } from "../../../lib/firebase/config";
 import { Alert } from "react-native";
 
 const VerifyEmailScreen = ({ navigation, route }: VerifyEmailScreenProps) => {
@@ -126,6 +127,7 @@ const VerifyEmailScreen = ({ navigation, route }: VerifyEmailScreenProps) => {
         try {
             await callVerifyOTP(otpString)
             await callCreateUserProfile(name ?? '')
+            await auth.currentUser?.reload()
             setErrorMessage('')
             navigation.navigate('EmailVerifiedScreen')
         } catch (error: any) {

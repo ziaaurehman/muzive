@@ -10,12 +10,15 @@ import { useAuth } from '../../hooks/useAuth';
 import { View, ActivityIndicator } from 'react-native';
 import { getUserProfile, subscribeToUserProfile } from '../../lib/firebase/firestore';
 
+import auth from '@react-native-firebase/auth';
+
 const Stack = createNativeStackNavigator<RootParamList>();
 
 export default function AppNavigator() {
     const { user, loading: authLoading } = useAuth();
     const [hasProfile, setHasProfile] = React.useState<boolean | null>(null);
     const [profileLoading, setProfileLoading] = React.useState(false);
+    const [isVerified, setIsVerified] = React.useState(false);
 
     const screenOptions: NativeStackNavigationOptions = {
         gestureEnabled: false,
@@ -26,15 +29,35 @@ export default function AppNavigator() {
         let unsubscribe: () => void;
 
         const setupProfileListener = async () => {
-            if (user && user.emailVerified) {
-                setProfileLoading(true);
-                unsubscribe = subscribeToUserProfile(user.uid, (profile) => {
-                    setHasProfile(!!(profile?.musicStyles && profile.musicStyles.length > 0));
-                    setProfileLoading(false);
-                });
+            if (user) {
+                try {
+                    await user.reload();
+                    const freshUser = auth().currentUser;
+                    const verified = freshUser?.emailVerified ?? false;
+                    setIsVerified(verified);
+
+                    // console.log('RootNavigator User State:', {
+                    //     email: freshUser?.email,
+                    //     verified: verified,
+                    //     uid: freshUser?.uid
+                    // });
+
+                    if (verified) {
+                        setProfileLoading(true);
+                        unsubscribe = subscribeToUserProfile(user.uid, (profile) => {
+                            // console.log('Profile update:', profile);
+                            setHasProfile(!!(profile?.musicStyles && profile.musicStyles.length > 0));
+                            setProfileLoading(false);
+                        });
+                    } else {
+                        setHasProfile(null);
+                        setProfileLoading(false);
+                    }
+                } catch (error) {
+                    console.error("User reload failed", error);
+                }
             } else {
-                setHasProfile(null);
-                setProfileLoading(false);
+                setIsVerified(false);
             }
         };
 
@@ -45,7 +68,7 @@ export default function AppNavigator() {
         };
     }, [user]);
 
-    const isLoading = authLoading || (user && user.emailVerified && profileLoading);
+    const isLoading = authLoading || (isVerified && profileLoading);
 
     if (isLoading) {
         return (
@@ -63,7 +86,9 @@ export default function AppNavigator() {
                     component={AuthStackNavigator}
                     initialParams={{ initialRouteName: 'AuthenicateByScreen' } as any}
                 />
-            ) : !user.emailVerified ? (
+            ) : user.isAnonymous ? (
+                <Stack.Screen name="MainNavigator" component={AppTabNavigator} />
+            ) : !isVerified ? (
                 <Stack.Screen
                     name="AuthNavigator"
                     component={AuthStackNavigator}

@@ -24,6 +24,7 @@ const AuthenicateByScreen = ({ navigation }: AuthenicateByProps) => {
     const { colors } = useTheme()
     const styles = createStyles(colors)
     const [isLoading, setIsLoading] = useState(false)
+    const [googleLoading, setGoogleLoading] = useState(false)
 
     useEffect(() => {
         GoogleSignin.configure({
@@ -45,7 +46,7 @@ const AuthenicateByScreen = ({ navigation }: AuthenicateByProps) => {
     }
 
     const onGoogleLogin = async () => {
-        setIsLoading(true)
+        setGoogleLoading(true)
         try {
             await GoogleSignin.hasPlayServices();
             const response = await GoogleSignin.signIn();
@@ -74,7 +75,7 @@ const AuthenicateByScreen = ({ navigation }: AuthenicateByProps) => {
             console.error("Google Login Error:", error);
             Alert.alert("Login Failed", error.message);
         } finally {
-            setIsLoading(false)
+            setGoogleLoading(false)
         }
     }
 
@@ -88,6 +89,7 @@ const AuthenicateByScreen = ({ navigation }: AuthenicateByProps) => {
                 title="Sign Up with Google"
                 onPress={onGoogleLogin}
                 buttonType="secondary"
+                loading={googleLoading}
                 fullWidth
                 icon={<GoogleIcon />}
             />
