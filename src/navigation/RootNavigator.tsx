@@ -9,6 +9,8 @@ import AppTabNavigator from './app/AppTabNavigator';
 import { useAuth } from '../../hooks/useAuth';
 import { View, ActivityIndicator } from 'react-native';
 import { getUserProfile, subscribeToUserProfile } from '../../lib/firebase/firestore';
+import VerifyEmailScreen from '../screens/auth/VerifyEmailScreen';
+import MusicStylesScreen from '../screens/auth/MusicStylesScreen';
 
 import auth from '@react-native-firebase/auth';
 
@@ -31,6 +33,8 @@ export default function AppNavigator() {
         const setupProfileListener = async () => {
             if (user) {
                 try {
+                    console.log(user);
+
                     await user.reload();
                     const freshUser = auth().currentUser;
                     const verified = freshUser?.emailVerified ?? false;
@@ -84,21 +88,18 @@ export default function AppNavigator() {
                 <Stack.Screen
                     name="AuthNavigator"
                     component={AuthStackNavigator}
-                    initialParams={{ initialRouteName: 'AuthenicateByScreen' } as any}
                 />
             ) : user.isAnonymous ? (
                 <Stack.Screen name="MainNavigator" component={AppTabNavigator} />
             ) : !isVerified ? (
                 <Stack.Screen
-                    name="AuthNavigator"
-                    component={AuthStackNavigator}
-                    initialParams={{ initialRouteName: 'VerifyEmailScreen' } as any}
+                    name="VerifyEmailScreen"
+                    component={VerifyEmailScreen}
                 />
             ) : hasProfile === false ? (
                 <Stack.Screen
-                    name="AuthNavigator"
-                    component={AuthStackNavigator}
-                    initialParams={{ initialRouteName: 'MusicStylesScreen' } as any}
+                    name="MusicStylesScreen"
+                    component={MusicStylesScreen}
                 />
             ) : (
                 <Stack.Screen name="MainNavigator" component={AppTabNavigator} />

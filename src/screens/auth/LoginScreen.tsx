@@ -52,16 +52,8 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
         setIsLoading(true)
         try {
             const user = await signInWithEmail(data.email, data.password)
-            if (user?.emailVerified) {
-                const profile = await getUserProfile(user.uid);
-                if (profile && profile.musicStyles && profile.musicStyles.length > 0) {
-                    navigation.replace('MainNavigator', { screen: 'HomeScreen' })
-                } else {
-                    navigation.replace('MusicStylesScreen')
-                }
-            } else {
+            if (!user?.emailVerified) {
                 await callSendVerificationOTP()
-                navigation.replace('VerifyEmailScreen')
             }
         } catch (error: any) {
             Alert.alert("Login Failed", error.message)
@@ -83,14 +75,7 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
 
                 if (!profile) {
                     await callCreateUserProfile(user.displayName ?? 'User');
-                    navigation.replace('MusicStylesScreen');
                     return;
-                }
-
-                if (profile.musicStyles && profile.musicStyles.length > 0) {
-                    navigation.replace('MainNavigator', { screen: 'HomeScreen' })
-                } else {
-                    navigation.replace('MusicStylesScreen')
                 }
             } else {
                 throw new Error("Google Sign-In failed: No ID Token found");

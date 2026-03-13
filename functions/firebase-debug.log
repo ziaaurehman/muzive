@@ -1,0 +1,2048 @@
+[debug] [2026-03-13T13:55:12.681Z] ----------------------------------------------------------------------
+[debug] [2026-03-13T13:55:12.690Z] Command:       /Users/macbook/.nvm/versions/node/v20.19.2/bin/node /Users/macbook/.nvm/versions/node/v20.19.2/bin/firebase emulators:start --project muzive-ff880
+[debug] [2026-03-13T13:55:12.691Z] CLI Version:   15.2.0
+[debug] [2026-03-13T13:55:12.691Z] Platform:      darwin
+[debug] [2026-03-13T13:55:12.691Z] Node Version:  v20.19.2
+[debug] [2026-03-13T13:55:12.691Z] Time:          Fri Mar 13 2026 18:55:12 GMT+0500 (Pakistan Standard Time)
+[debug] [2026-03-13T13:55:12.691Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-03-13T13:55:14.408Z] Object "" in "firebase.json" has unknown property: {"additionalProperty":"react-native"}
+[debug] [2026-03-13T13:55:14.417Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-03-13T13:55:14.417Z] > authorizing via signed-in user (ziaareact@gmail.com)
+[debug] [2026-03-13T13:55:14.551Z] openjdk version "21.0.10" 2026-01-20
+
+[debug] [2026-03-13T13:55:14.552Z] OpenJDK Runtime Environment Homebrew (build 21.0.10)
+OpenJDK 64-Bit Server VM Homebrew (build 21.0.10, mixed mode, sharing)
+
+[debug] [2026-03-13T13:55:14.556Z] Parsed Java major version: 21
+[info] i  emulators: Starting emulators: auth, functions, firestore, extensions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, extensions"}}
+[debug] [2026-03-13T13:55:14.558Z] Checked if tokens are valid: false, expires at: 1773329661436
+[debug] [2026-03-13T13:55:14.559Z] Checked if tokens are valid: false, expires at: 1773329661436
+[debug] [2026-03-13T13:55:14.559Z] > refreshing access token with scopes: []
+[debug] [2026-03-13T13:55:14.561Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-03-13T13:55:14.562Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-03-13T13:55:14.952Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-03-13T13:55:14.952Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-03-13T13:55:14.998Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/muzive-ff880 [none]
+[debug] [2026-03-13T13:55:16.497Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/muzive-ff880 200
+[debug] [2026-03-13T13:55:16.497Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/muzive-ff880 {"projectNumber":"294527245090","projectId":"muzive-ff880","lifecycleState":"ACTIVE","name":"muzive","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-01-26T14:49:20.097195Z"}
+[debug] [2026-03-13T13:55:17.914Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-03-13T13:55:17.914Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-03-13T13:55:17.914Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-03-13T13:55:17.914Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-03-13T13:55:17.914Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2026-03-13T13:55:17.919Z] Write emulator hub locator at /var/folders/n3/9j33zyds20sb_ncq1j0t9ccw0000gn/T/hub-muzive-ff880.json
+[debug] [2026-03-13T13:55:17.930Z] [Extensions] Started Extensions emulator, this is a noop.
+[debug] [2026-03-13T13:55:18.649Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-03-13T13:55:18.649Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-03-13T13:55:18.649Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-03-13T13:55:18.649Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2026-03-13T13:55:18.673Z] defaultcredentials: writing to file /Users/macbook/.config/firebase/ziaareact_gmail_com_application_default_credentials.json
+[debug] [2026-03-13T13:55:18.675Z] Setting GAC to /Users/macbook/.config/firebase/ziaareact_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/macbook/.config/firebase/ziaareact_gmail_com_application_default_credentials.json"}}
+[debug] [2026-03-13T13:55:18.676Z] Checked if tokens are valid: true, expires at: 1773413713952
+[debug] [2026-03-13T13:55:18.676Z] Checked if tokens are valid: true, expires at: 1773413713952
+[debug] [2026-03-13T13:55:18.676Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/muzive-ff880/adminSdkConfig [none]
+[debug] [2026-03-13T13:55:19.287Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/muzive-ff880/adminSdkConfig 200
+[debug] [2026-03-13T13:55:19.288Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/muzive-ff880/adminSdkConfig {"projectId":"muzive-ff880","storageBucket":"muzive-ff880.firebasestorage.app"}
+[debug] [2026-03-13T13:55:19.321Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-03-13T13:55:19.321Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2026-03-13T13:55:19.321Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/macbook/.cache/firebase/emulators/cloud-firestore-emulator-v1.20.2.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","muzive-ff880","--rules","/Users/macbook/Documents/GitHub/muzive/firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8080} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/macbook/.cache/firebase/emulators/cloud-firestore-emulator-v1.20.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"muzive-ff880\",\"--rules\",\"/Users/macbook/Documents/GitHub/muzive/firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8080}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2026-03-13T13:55:20.615Z] Mar 13, 2026 6:55:20 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 13, 2026 6:55:20 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
+[debug] [2026-03-13T13:55:20.645Z] API endpoint: http://127.0.0.1:8080 {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://127.0.0.1:8080"}}
+[debug] [2026-03-13T13:55:20.645Z] 
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
+
+If you are running a Firestore in Datastore Mode project, run:
+
+   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080
+
+Note: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nIf you are running a Firestore in Datastore Mode project, run:\n\n   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080\n\nNote: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.\nDev App Server is now running.\n\n"}}
+[info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2026-03-13T13:55:26.460Z] [Extensions] Connecting Extensions emulator, this is a noop.
+[info] i  functions: Watching "/Users/macbook/Documents/GitHub/muzive/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/macbook/Documents/GitHub/muzive/functions\" for Cloud Functions..."}}
+[debug] [2026-03-13T13:55:26.467Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2026-03-13T13:55:27.739Z] > [functions] package.json contents: {
+  "name": "functions",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.6",
+    "cors": "^2.8.6",
+    "crypto-js": "^4.2.0",
+    "firebase-admin": "^13.6.1",
+    "firebase-functions": "^7.0.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3"
+  }
+}
+[debug] [2026-03-13T13:55:27.740Z] Building nodejs source
+[debug] [2026-03-13T13:55:27.740Z] Failed to find version of module node: reached end of search path /Users/macbook/Documents/GitHub/muzive/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-03-13T13:55:27.743Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-03-13T13:55:27.753Z] Found firebase-functions binary at '/Users/macbook/Documents/GitHub/muzive/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8370
+
+[debug] [2026-03-13T13:55:28.528Z] Mar 13, 2026 6:55:28 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 13, 2026 6:55:28 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[error] SENDGRID_API_KEY is missing from process.env!
+
+[debug] [2026-03-13T13:55:28.686Z] Got response from /__/functions.yaml {"endpoints":{"sendVerificationOTP":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"sendVerificationOTP"},"verifyOTP":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"verifyOTP"},"createUserProfile":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"createUserProfile"},"sendPasswordResetOTP":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"sendPasswordResetOTP"},"verifyPasswordResetOTP":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"verifyPasswordResetOTP"},"resetPassword":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"resetPassword"},"updateMusicStyles":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-south1"],"labels":{},"callableTrigger":{},"entryPoint":"updateMusicStyles"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-03-13T13:55:32.716Z] defaultcredentials: writing to file /Users/macbook/.config/firebase/ziaareact_gmail_com_application_default_credentials.json
+[debug] [2026-03-13T13:55:32.717Z] Setting GAC to /Users/macbook/.config/firebase/ziaareact_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/macbook/.config/firebase/ziaareact_gmail_com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: sendVerificationOTP, verifyOTP, createUserProfile, sendPasswordResetOTP, verifyPasswordResetOTP, resetPassword, updateMusicStyles. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendVerificationOTP, verifyOTP, createUserProfile, sendPasswordResetOTP, verifyPasswordResetOTP, resetPassword, updateMusicStyles."}}
+[info] ✔  functions[asia-south1-sendVerificationOTP]: http function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/sendVerificationOTP). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/sendVerificationOTP)."}}
+[info] ✔  functions[asia-south1-verifyOTP]: http function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/verifyOTP). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/verifyOTP)."}}
+[info] ✔  functions[asia-south1-createUserProfile]: http function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/createUserProfile). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/createUserProfile)."}}
+[info] ✔  functions[asia-south1-sendPasswordResetOTP]: http function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/sendPasswordResetOTP). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/sendPasswordResetOTP)."}}
+[info] ✔  functions[asia-south1-verifyPasswordResetOTP]: http function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/verifyPasswordResetOTP). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/verifyPasswordResetOTP)."}}
+[info] ✔  functions[asia-south1-resetPassword]: http function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/resetPassword). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/resetPassword)."}}
+[info] ✔  functions[asia-south1-updateMusicStyles]: http function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/updateMusicStyles). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/muzive-ff880/asia-south1/updateMusicStyles)."}}
+[debug] [2026-03-13T13:55:32.728Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬──────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI              │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:4000/auth       │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions  │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore  │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Extensions     │ 127.0.0.1:5001 │ http://127.0.0.1:4000/extensions │
+└────────────────┴────────────────┴──────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500, 9150
+┌─────────────────────────┬───────────────┬─────────────────────┐
+│ Extension Instance Name │ Extension Ref │ View in Emulator UI │
+└─────────────────────────┴───────────────┴─────────────────────┘
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2026-03-13T13:55:34.419Z] Mar 13, 2026 6:55:34 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+Mar 13, 2026 6:55:34 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 13, 2026 6:55:34 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\nMar 13, 2026 6:55:34 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2026-03-13T13:56:50.129Z] [work-queue] {"queuedWork":["/muzive-ff880/asia-south1/sendVerificationOTP-2026-03-13T13:56:50.129Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-13T13:56:50.129Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/muzive-ff880/asia-south1/sendVerificationOTP-2026-03-13T13:56:50.129Z"],"workRunningCount":1}
+[debug] [2026-03-13T13:56:50.129Z] Accepted request POST /muzive-ff880/asia-south1/sendVerificationOTP --> asia-south1-sendVerificationOTP
+[debug] [2026-03-13T13:56:50.132Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-03-13T13:56:50.132Z] [functions] Got req.url=/muzive-ff880/asia-south1/sendVerificationOTP, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/muzive-ff880/asia-south1/sendVerificationOTP, mapping to path=/"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-03-13T13:56:50.139Z] [worker-pool] addWorker(asia-south1-sendVerificationOTP) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(asia-south1-sendVerificationOTP)"}}
+[debug] [2026-03-13T13:56:50.140Z] [worker-pool] Adding worker with key asia-south1-sendVerificationOTP, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key asia-south1-sendVerificationOTP, total=1"}}
+[debug] [2026-03-13T13:56:51.310Z] [runtime-status] [95776] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.6.1","resolution":"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [95776] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.6.1\",\"resolution\":\"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2026-03-13T13:56:51.311Z] [runtime-status] [95776] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.0.5","resolution":"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [95776] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.0.5\",\"resolution\":\"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2026-03-13T13:56:51.311Z] [runtime-status] [95776] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [95776] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2026-03-13T13:56:51.312Z] [runtime-status] [95776] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.0.5","resolution":"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [95776] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.0.5\",\"resolution\":\"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2026-03-13T13:56:51.312Z] [runtime-status] [95776] Detected firebase-functions v7+, skipping legacy stubs. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [95776] Detected firebase-functions v7+, skipping legacy stubs."}}
+[debug] [2026-03-13T13:56:51.312Z] [runtime-status] [95776] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.6.1","resolution":"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [95776] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.6.1\",\"resolution\":\"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2026-03-13T13:56:51.352Z] [runtime-status] [95776] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.0.5","resolution":"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [95776] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.0.5\",\"resolution\":\"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2026-03-13T13:56:51.567Z] [runtime-status] [95776] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"13.6.1","resolution":"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [95776] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"13.6.1\",\"resolution\":\"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[info] >  Setting SendGrid API Key (starts with: SG....) {"user":"Setting SendGrid API Key (starts with: SG....)","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"\u001b[90m> \u001b[39m Setting SendGrid API Key (starts with: SG....)"}}
+[debug] [2026-03-13T13:56:51.626Z] [runtime-status] [95776] Functions runtime initialized. {"cwd":"/Users/macbook/Documents/GitHub/muzive/functions","node_version":"20.19.2"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [95776] Functions runtime initialized. {\"cwd\":\"/Users/macbook/Documents/GitHub/muzive/functions\",\"node_version\":\"20.19.2\"}"}}
+[debug] [2026-03-13T13:56:51.627Z] [runtime-status] [95776] Listening to port: /var/folders/n3/9j33zyds20sb_ncq1j0t9ccw0000gn/T/fire_emu_1debd80aaf853b76.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[runtime-status] [95776] Listening to port: /var/folders/n3/9j33zyds20sb_ncq1j0t9ccw0000gn/T/fire_emu_1debd80aaf853b76.sock"}}
+[debug] [2026-03-13T13:56:51.661Z] [worker-asia-south1-sendVerificationOTP-a19b4e9a-3579-42aa-8302-57140b010bc1]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[worker-asia-south1-sendVerificationOTP-a19b4e9a-3579-42aa-8302-57140b010bc1]: IDLE"}}
+[debug] [2026-03-13T13:56:51.661Z] [worker-pool] submitRequest(triggerId=asia-south1-sendVerificationOTP) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=asia-south1-sendVerificationOTP)"}}
+[info] i  functions: Beginning execution of "asia-south1-sendVerificationOTP" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Beginning execution of \"asia-south1-sendVerificationOTP\""}}
+[debug] [2026-03-13T13:56:51.662Z] [worker-asia-south1-sendVerificationOTP-a19b4e9a-3579-42aa-8302-57140b010bc1]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[worker-asia-south1-sendVerificationOTP-a19b4e9a-3579-42aa-8302-57140b010bc1]: BUSY"}}
+[info] >  {"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"verifications\":{\"app\":\"MISSING\",\"auth\":\"VALID\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[info] >  {"severity":"ERROR","message":"Unhandled error FirebaseAuthError: There is no user record corresponding to the provided identifier.\n    at /Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/auth/auth-api-request.js:552:15\n    at /Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/auth/auth-api-request.js:1616:13\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /Users/macbook/Documents/GitHub/muzive/functions/lib/index.js:71:18\n    at async /Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/common/providers/https.js:513:14\n    at async runFunction (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:399:9)\n    at async runHTTPS (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:424:5)\n    at async /Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:585:21 {\n  errorInfo: {\n    code: 'auth/user-not-found',\n    message: 'There is no user record corresponding to the provided identifier.'\n  },\n  codePrefix: 'auth'\n}"} {"user":{"severity":"ERROR","message":"Unhandled error FirebaseAuthError: There is no user record corresponding to the provided identifier.\n    at /Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/auth/auth-api-request.js:552:15\n    at /Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/auth/auth-api-request.js:1616:13\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /Users/macbook/Documents/GitHub/muzive/functions/lib/index.js:71:18\n    at async /Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/common/providers/https.js:513:14\n    at async runFunction (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:399:9)\n    at async runHTTPS (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:424:5)\n    at async /Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:585:21 {\n  errorInfo: {\n    code: 'auth/user-not-found',\n    message: 'There is no user record corresponding to the provided identifier.'\n  },\n  codePrefix: 'auth'\n}"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"severity\":\"ERROR\",\"message\":\"Unhandled error FirebaseAuthError: There is no user record corresponding to the provided identifier.\\n    at /Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/auth/auth-api-request.js:552:15\\n    at /Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/auth/auth-api-request.js:1616:13\\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\\n    at async /Users/macbook/Documents/GitHub/muzive/functions/lib/index.js:71:18\\n    at async /Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/common/providers/https.js:513:14\\n    at async runFunction (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:399:9)\\n    at async runHTTPS (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:424:5)\\n    at async /Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:585:21 {\\n  errorInfo: {\\n    code: 'auth/user-not-found',\\n    message: 'There is no user record corresponding to the provided identifier.'\\n  },\\n  codePrefix: 'auth'\\n}\"}"}}
+[debug] [2026-03-13T13:56:51.714Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "asia-south1-sendVerificationOTP" in 52.662942ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Finished \"asia-south1-sendVerificationOTP\" in 52.662942ms"}}
+[debug] [2026-03-13T13:56:51.715Z] [worker-asia-south1-sendVerificationOTP-a19b4e9a-3579-42aa-8302-57140b010bc1]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[worker-asia-south1-sendVerificationOTP-a19b4e9a-3579-42aa-8302-57140b010bc1]: IDLE"}}
+[debug] [2026-03-13T13:56:51.715Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-03-13T13:56:51.715Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-03-13T13:56:51.715Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-13T13:57:00.455Z] Mar 13, 2026 6:57:00 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 13, 2026 6:57:00 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2026-03-13T13:57:00.458Z] Mar 13, 2026 6:57:00 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 13, 2026 6:57:00 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2026-03-13T13:57:46.856Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/muzive-ff880/trigger_multicast [none]
+[debug] [2026-03-13T13:57:46.856Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/muzive-ff880/trigger_multicast {"eventId":"b6ca88d6-1399-476e-9f51-7f73bb1b9b88","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/muzive-ff880","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2026-03-13T13:57:46.855Z","data":{"uid":"IwZgfQ8U8dElkiEZEk3YvafJ8PoW","email":"ziaareact@gmail.com","emailVerified":false,"metadata":{"creationTime":"2026-03-13T13:57:46.854Z","lastSignInTime":"2026-03-13T13:57:46.854Z"},"customClaims":{},"providerData":[{"rawId":"ziaareact@gmail.com","providerId":"password","email":"ziaareact@gmail.com","federatedId":"ziaareact@gmail.com"}]}}
+[debug] [2026-03-13T13:57:46.862Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/muzive-ff880/trigger_multicast 200
+[debug] [2026-03-13T13:57:46.862Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/muzive-ff880/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2026-03-13T13:57:46.898Z] [work-queue] {"queuedWork":["/muzive-ff880/asia-south1/sendVerificationOTP-2026-03-13T13:57:46.898Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-13T13:57:46.898Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/muzive-ff880/asia-south1/sendVerificationOTP-2026-03-13T13:57:46.898Z"],"workRunningCount":1}
+[debug] [2026-03-13T13:57:46.899Z] Accepted request POST /muzive-ff880/asia-south1/sendVerificationOTP --> asia-south1-sendVerificationOTP
+[debug] [2026-03-13T13:57:46.901Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-03-13T13:57:46.901Z] [functions] Got req.url=/muzive-ff880/asia-south1/sendVerificationOTP, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/muzive-ff880/asia-south1/sendVerificationOTP, mapping to path=/"}}
+[debug] [2026-03-13T13:57:46.901Z] [worker-pool] submitRequest(triggerId=asia-south1-sendVerificationOTP) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=asia-south1-sendVerificationOTP)"}}
+[info] i  functions: Beginning execution of "asia-south1-sendVerificationOTP" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Beginning execution of \"asia-south1-sendVerificationOTP\""}}
+[debug] [2026-03-13T13:57:46.901Z] [worker-asia-south1-sendVerificationOTP-a19b4e9a-3579-42aa-8302-57140b010bc1]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[worker-asia-south1-sendVerificationOTP-a19b4e9a-3579-42aa-8302-57140b010bc1]: BUSY"}}
+[info] >  {"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"verifications\":{\"app\":\"MISSING\",\"auth\":\"VALID\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[debug] [2026-03-13T13:57:47.282Z] Mar 13, 2026 6:57:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 13, 2026 6:57:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
+[info] >  Attempting to send OTP to ziaareact@gmail.com... {"user":"Attempting to send OTP to ziaareact@gmail.com...","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"\u001b[90m> \u001b[39m Attempting to send OTP to ziaareact@gmail.com..."}}
+[debug] [2026-03-13T13:57:48.575Z] Mar 13, 2026 6:57:48 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+Mar 13, 2026 6:57:48 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 13, 2026 6:57:48 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nMar 13, 2026 6:57:48 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[info] >  Email sent successfully via SendGrid. {"user":"Email sent successfully via SendGrid.","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"\u001b[90m> \u001b[39m Email sent successfully via SendGrid."}}
+[debug] [2026-03-13T13:57:49.805Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "asia-south1-sendVerificationOTP" in 2904.366884ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Finished \"asia-south1-sendVerificationOTP\" in 2904.366884ms"}}
+[debug] [2026-03-13T13:57:49.806Z] [worker-asia-south1-sendVerificationOTP-a19b4e9a-3579-42aa-8302-57140b010bc1]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[worker-asia-south1-sendVerificationOTP-a19b4e9a-3579-42aa-8302-57140b010bc1]: IDLE"}}
+[debug] [2026-03-13T13:57:49.806Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-03-13T13:57:49.806Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-03-13T13:57:49.806Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-13T13:59:14.978Z] [work-queue] {"queuedWork":["/muzive-ff880/asia-south1/sendVerificationOTP-2026-03-13T13:59:14.978Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-13T13:59:14.978Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/muzive-ff880/asia-south1/sendVerificationOTP-2026-03-13T13:59:14.978Z"],"workRunningCount":1}
+[debug] [2026-03-13T13:59:14.979Z] Accepted request POST /muzive-ff880/asia-south1/sendVerificationOTP --> asia-south1-sendVerificationOTP
+[debug] [2026-03-13T13:59:14.981Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-03-13T13:59:14.981Z] [functions] Got req.url=/muzive-ff880/asia-south1/sendVerificationOTP, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/muzive-ff880/asia-south1/sendVerificationOTP, mapping to path=/"}}
+[debug] [2026-03-13T13:59:14.982Z] [worker-pool] submitRequest(triggerId=asia-south1-sendVerificationOTP) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=asia-south1-sendVerificationOTP)"}}
+[info] i  functions: Beginning execution of "asia-south1-sendVerificationOTP" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Beginning execution of \"asia-south1-sendVerificationOTP\""}}
+[debug] [2026-03-13T13:59:14.982Z] [worker-asia-south1-sendVerificationOTP-a19b4e9a-3579-42aa-8302-57140b010bc1]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[worker-asia-south1-sendVerificationOTP-a19b4e9a-3579-42aa-8302-57140b010bc1]: BUSY"}}
+[info] >  {"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"verifications\":{\"app\":\"MISSING\",\"auth\":\"VALID\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[info] >  Attempting to send OTP to ziaareact@gmail.com... {"user":"Attempting to send OTP to ziaareact@gmail.com...","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"\u001b[90m> \u001b[39m Attempting to send OTP to ziaareact@gmail.com..."}}
+[info] >  Email sent successfully via SendGrid. {"user":"Email sent successfully via SendGrid.","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"\u001b[90m> \u001b[39m Email sent successfully via SendGrid."}}
+[debug] [2026-03-13T13:59:15.756Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "asia-south1-sendVerificationOTP" in 774.509513ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Finished \"asia-south1-sendVerificationOTP\" in 774.509513ms"}}
+[debug] [2026-03-13T13:59:15.757Z] [worker-asia-south1-sendVerificationOTP-a19b4e9a-3579-42aa-8302-57140b010bc1]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[worker-asia-south1-sendVerificationOTP-a19b4e9a-3579-42aa-8302-57140b010bc1]: IDLE"}}
+[debug] [2026-03-13T13:59:15.757Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-03-13T13:59:15.757Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-03-13T13:59:15.757Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-13T13:59:55.940Z] Mar 13, 2026 6:59:55 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 13, 2026 6:59:55 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2026-03-13T13:59:55.943Z] Mar 13, 2026 6:59:55 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 13, 2026 6:59:55 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2026-03-13T14:30:51.324Z] [work-queue] {"queuedWork":["/muzive-ff880/asia-south1/verifyOTP-2026-03-13T14:30:51.320Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-13T14:30:51.336Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/muzive-ff880/asia-south1/verifyOTP-2026-03-13T14:30:51.320Z"],"workRunningCount":1}
+[debug] [2026-03-13T14:30:51.336Z] Accepted request POST /muzive-ff880/asia-south1/verifyOTP --> asia-south1-verifyOTP
+[debug] [2026-03-13T14:30:51.355Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-03-13T14:30:51.357Z] [functions] Got req.url=/muzive-ff880/asia-south1/verifyOTP, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/muzive-ff880/asia-south1/verifyOTP, mapping to path=/"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-03-13T14:30:51.374Z] [worker-pool] addWorker(asia-south1-verifyOTP) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(asia-south1-verifyOTP)"}}
+[debug] [2026-03-13T14:30:51.375Z] [worker-pool] Adding worker with key asia-south1-verifyOTP, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key asia-south1-verifyOTP, total=1"}}
+[debug] [2026-03-13T14:30:52.837Z] [runtime-status] [97641] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.6.1","resolution":"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"[runtime-status] [97641] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.6.1\",\"resolution\":\"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2026-03-13T14:30:52.839Z] [runtime-status] [97641] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.0.5","resolution":"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"[runtime-status] [97641] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.0.5\",\"resolution\":\"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2026-03-13T14:30:52.840Z] [runtime-status] [97641] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"[runtime-status] [97641] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2026-03-13T14:30:52.840Z] [runtime-status] [97641] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.0.5","resolution":"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"[runtime-status] [97641] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.0.5\",\"resolution\":\"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2026-03-13T14:30:52.840Z] [runtime-status] [97641] Detected firebase-functions v7+, skipping legacy stubs. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"[runtime-status] [97641] Detected firebase-functions v7+, skipping legacy stubs."}}
+[debug] [2026-03-13T14:30:52.841Z] [runtime-status] [97641] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.6.1","resolution":"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"[runtime-status] [97641] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.6.1\",\"resolution\":\"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2026-03-13T14:30:52.966Z] [runtime-status] [97641] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.0.5","resolution":"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"[runtime-status] [97641] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.0.5\",\"resolution\":\"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2026-03-13T14:30:53.346Z] [runtime-status] [97641] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"13.6.1","resolution":"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"[runtime-status] [97641] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"13.6.1\",\"resolution\":\"/Users/macbook/Documents/GitHub/muzive/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[info] >  Setting SendGrid API Key (starts with: SG....) {"user":"Setting SendGrid API Key (starts with: SG....)","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"\u001b[90m> \u001b[39m Setting SendGrid API Key (starts with: SG....)"}}
+[debug] [2026-03-13T14:30:53.460Z] [runtime-status] [97641] Functions runtime initialized. {"cwd":"/Users/macbook/Documents/GitHub/muzive/functions","node_version":"20.19.2"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"[runtime-status] [97641] Functions runtime initialized. {\"cwd\":\"/Users/macbook/Documents/GitHub/muzive/functions\",\"node_version\":\"20.19.2\"}"}}
+[debug] [2026-03-13T14:30:53.461Z] [runtime-status] [97641] Listening to port: /var/folders/n3/9j33zyds20sb_ncq1j0t9ccw0000gn/T/fire_emu_2ceac8e2ed8b182e.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"[runtime-status] [97641] Listening to port: /var/folders/n3/9j33zyds20sb_ncq1j0t9ccw0000gn/T/fire_emu_2ceac8e2ed8b182e.sock"}}
+[debug] [2026-03-13T14:30:53.504Z] [worker-asia-south1-verifyOTP-f96f14a9-81f1-4e8e-bcae-d10a9ef9ec0c]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"[worker-asia-south1-verifyOTP-f96f14a9-81f1-4e8e-bcae-d10a9ef9ec0c]: IDLE"}}
+[debug] [2026-03-13T14:30:53.505Z] [worker-pool] submitRequest(triggerId=asia-south1-verifyOTP) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=asia-south1-verifyOTP)"}}
+[info] i  functions: Beginning execution of "asia-south1-verifyOTP" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"Beginning execution of \"asia-south1-verifyOTP\""}}
+[debug] [2026-03-13T14:30:53.506Z] [worker-asia-south1-verifyOTP-f96f14a9-81f1-4e8e-bcae-d10a9ef9ec0c]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"[worker-asia-south1-verifyOTP-f96f14a9-81f1-4e8e-bcae-d10a9ef9ec0c]: BUSY"}}
+[info] >  {"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"verifications\":{\"app\":\"MISSING\",\"auth\":\"VALID\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[debug] [2026-03-13T14:30:53.880Z] Mar 13, 2026 7:30:53 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 13, 2026 7:30:53 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
+[debug] [2026-03-13T14:30:54.032Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "asia-south1-verifyOTP" in 526.7651ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"Finished \"asia-south1-verifyOTP\" in 526.7651ms"}}
+[debug] [2026-03-13T14:30:54.033Z] [worker-asia-south1-verifyOTP-f96f14a9-81f1-4e8e-bcae-d10a9ef9ec0c]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"[worker-asia-south1-verifyOTP-f96f14a9-81f1-4e8e-bcae-d10a9ef9ec0c]: IDLE"}}
+[debug] [2026-03-13T14:30:54.033Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-03-13T14:30:54.033Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-03-13T14:30:54.033Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-13T14:31:10.795Z] Mar 13, 2026 7:31:10 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 13, 2026 7:31:10 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2026-03-13T14:31:10.814Z] Mar 13, 2026 7:31:10 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 13, 2026 7:31:10 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2026-03-13T16:01:11.131Z] Received signal SIGHUP 1
+[info]  
+[info] i  emulators: Received SIGHUP for the first time. Starting a clean shutdown. 
+[info] i  emulators: Please wait for a clean shutdown or send the SIGHUP signal again to stop right now. 
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  ui: Stopping Emulator UI {"metadata":{"emulator":{"name":"ui"},"message":"Stopping Emulator UI"}}
+[info] i  extensions: Stopping Extensions Emulator {"metadata":{"emulator":{"name":"extensions"},"message":"Stopping Extensions Emulator"}}
+[debug] [2026-03-13T16:01:11.136Z] [Extensions] Stopping Extensions emulator, this is a noop.
+[info] i  functions: Stopping Functions Emulator {"metadata":{"emulator":{"name":"functions"},"message":"Stopping Functions Emulator"}}
+[info] i  firestore: Stopping Firestore Emulator {"metadata":{"emulator":{"name":"firestore"},"message":"Stopping Firestore Emulator"}}
+[debug] [2026-03-13T16:01:11.145Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.146Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.148Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.148Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.149Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.150Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.151Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.151Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.152Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.152Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.153Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.153Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.154Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.154Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.154Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.155Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.157Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.158Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.158Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.159Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.159Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.159Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.160Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.160Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.161Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.242Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.246Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.247Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.247Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.248Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.249Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.249Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.250Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.250Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.251Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.253Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.253Z] *** shutting down gRPC server since JVM is shutting down
+ {"metadata":{"emulator":{"name":"firestore"},"message":"*** shutting down gRPC server since JVM is shutting down\n"}}
+[debug] [2026-03-13T16:01:11.254Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.254Z] [worker-asia-south1-sendVerificationOTP-a19b4e9a-3579-42aa-8302-57140b010bc1]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[worker-asia-south1-sendVerificationOTP-a19b4e9a-3579-42aa-8302-57140b010bc1]: exited"}}
+[debug] [2026-03-13T16:01:11.254Z] [worker-asia-south1-sendVerificationOTP-a19b4e9a-3579-42aa-8302-57140b010bc1]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-sendVerificationOTP"},"extension":{},"message":"[worker-asia-south1-sendVerificationOTP-a19b4e9a-3579-42aa-8302-57140b010bc1]: FINISHED"}}
+[debug] [2026-03-13T16:01:11.255Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.255Z] [worker-asia-south1-verifyOTP-f96f14a9-81f1-4e8e-bcae-d10a9ef9ec0c]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"[worker-asia-south1-verifyOTP-f96f14a9-81f1-4e8e-bcae-d10a9ef9ec0c]: exited"}}
+[debug] [2026-03-13T16:01:11.255Z] [worker-asia-south1-verifyOTP-f96f14a9-81f1-4e8e-bcae-d10a9ef9ec0c]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-verifyOTP"},"extension":{},"message":"[worker-asia-south1-verifyOTP-f96f14a9-81f1-4e8e-bcae-d10a9ef9ec0c]: FINISHED"}}
+[debug] [2026-03-13T16:01:11.255Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.256Z] Received signal SIGHUP 2
+[info]  
+[debug] [2026-03-13T16:01:11.256Z] Skipping clean onExit() and cleanShutdown()
+[warn] ⚠  emulators: Received SIGHUP 2 times. You have forced the Emulator Suite to exit without waiting for 1 subprocess to finish. These processes may still be running on your machine:  
+[info] 
+┌────────────────────┬────────────────┬───────┐
+│ Emulator           │ Host:Port      │ PID   │
+├────────────────────┼────────────────┼───────┤
+│ Firestore Emulator │ 127.0.0.1:8080 │ 95682 │
+└────────────────────┴────────────────┴───────┘
+
+To force them to exit run:
+
+[info] kill 95682
+
+[debug] [2026-03-13T16:01:11.262Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.263Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.263Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.264Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.265Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.266Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.267Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.268Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.268Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.269Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.269Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.270Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.270Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.270Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.287Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.288Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.289Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.291Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.292Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.302Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.306Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.307Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.309Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.310Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.310Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.311Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.312Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.312Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.313Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.313Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.314Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.317Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.318Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.318Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.318Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.319Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.319Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.319Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.320Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.320Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.321Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.323Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.323Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.324Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.325Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.325Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.326Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.326Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.328Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.328Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.329Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.329Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.329Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.330Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.331Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.331Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.332Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.332Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.333Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.334Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.334Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.334Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.335Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.335Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.336Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.339Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.340Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.341Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.342Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.343Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.343Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.343Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.344Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.345Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.345Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.345Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.346Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.346Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.347Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.347Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.347Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.348Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.348Z] *** server shut down
+ {"metadata":{"emulator":{"name":"firestore"},"message":"*** server shut down\n"}}
+[debug] [2026-03-13T16:01:11.350Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.350Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.351Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.351Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.352Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.352Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.353Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.353Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.355Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.355Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.356Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-03-13T16:01:11.357Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:958:11)
+    at Socket._write (node:net:970:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/macbook/.nvm/versions/node/v20.19.2/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 

@@ -79,12 +79,7 @@ const MusicStylesScreen = ({ navigation }: MusicStylesScreenProps) => {
         try {
             setIsLoading(true)
             await callUpdateMusicStyles(selectedStyles)
-            Alert.alert("Music Styles", "Music styles updated successfully", [
-                {
-                    text: "OK",
-                    onPress: () => navigation.replace('MainNavigator', { screen: 'HomeScreen' })
-                }
-            ])
+            // State will automatically update RootNavigator
         } catch (error: any) {
             Alert.alert("Music Styles", error.message)
         } finally {
@@ -144,7 +139,7 @@ const MusicStylesScreen = ({ navigation }: MusicStylesScreenProps) => {
                 <Row style={styles.buttonRow}>
                     <AppButton
                         title="Skip for Now"
-                        onPress={() => { }}
+                        onPress={() => { /* Optionally skip but declarative nav currently strictly requires styles */ }}
                         buttonType="outline"
                         style={styles.skipButton}
                     />

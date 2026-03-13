@@ -13,7 +13,6 @@ const HomeScreen = ({ navigation }: { navigation: HomeScreenProp }) => {
         setIsLoading(true)
         try {
             await logout();
-            navigation.replace('AuthNavigator', { screen: 'AuthenicateByScreen' })
         } catch (error: any) {
             Alert.alert("Logout Failed", error.message)
         } finally {

@@ -37,7 +37,6 @@ const AuthenicateByScreen = ({ navigation }: AuthenicateByProps) => {
         setIsLoading(true)
         try {
             await signInAsGuest()
-            navigation.replace('MainNavigator', { screen: 'HomeScreen' })
         } catch (error: any) {
             Alert.alert("Guest Mode Failed", error.message)
         } finally {
@@ -59,14 +58,7 @@ const AuthenicateByScreen = ({ navigation }: AuthenicateByProps) => {
 
                 if (!profile) {
                     await callCreateUserProfile(user.displayName ?? 'User');
-                    navigation.replace('MusicStylesScreen');
                     return;
-                }
-
-                if (profile.musicStyles && profile.musicStyles.length > 0) {
-                    navigation.replace('MainNavigator', { screen: 'HomeScreen' })
-                } else {
-                    navigation.replace('MusicStylesScreen')
                 }
             } else {
                 throw new Error("Google Sign-In failed: No ID Token found");
